@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- Full-width background image section -->
+<div class="hero-section bg-image text-white text-center py-5" style="min-height: 80vh; display: flex;">
+    <div class="container">
+        <h1 class="display-3 mb-3 fw-bold border-bottom">Welcome to Our Eventify Website</h1>
+        <p class="lead mb-4 fw-bolder">Discover the Hottest Events Near You! Stay Updated, Connect with Others, and Share Your Experience.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="@Url.Action("Index", "Blogs")" class="btn btn-dark btn-lg">Get Start For Free</a>
+            <a href="@Url.Action("Index", "Blogs")" class="btn btn-dark btn-lg">View Latest Event</a>
+        </div>
+    </div>
+</div>
+
+@* <div class="container text-center mt-5"> *@
+@*     <h2 class="mb-4">What is our Blog?</h2> *@
+@*     <p class="lead">Our blog is a place where we share valuable insights, stories, and updates about various topics. From technology to lifestyle, you’ll find interesting reads for everyone!</p> *@
+@* </div> *@

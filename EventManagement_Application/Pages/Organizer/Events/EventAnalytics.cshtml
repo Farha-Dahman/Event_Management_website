@@ -1,0 +1,39 @@
+﻿@page
+@model EventManagement_Application.Pages.Organizer.Events.EventAnalyticsModel
+@{
+    ViewData["Title"] = "Event Analytics";
+}
+
+<h2>@Model.Event.Title - Analytics</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ticket Type</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sold</th>
+            <th>Revenue</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model.Event.Tickets)
+        {
+            var sold = ticket.Quantity - ticket.AvailableTickets;
+            var revenue = sold * ticket.Price;
+            <tr>
+                <td>@ticket.TicketType</td>
+                <td>@ticket.Price.ToString("C")</td>
+                <td>@ticket.Quantity</td>
+                <td>@sold</td>
+                <td>@revenue.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Total Tickets Sold: @Model.TotalTicketsSold</h3>
+<h3>Total Revenue: @Model.TotalRevenue.ToString("C")</h3>
+<h3>Attendance Rate: @Model.AttendanceRate.ToString("0.00")%</h3>
+
+<a asp-page="./Index" class="btn btn-primary">Back to Events</a>

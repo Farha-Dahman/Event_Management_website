@@ -1,0 +1,36 @@
+﻿@page
+@model EventManagement_Application.Pages.Organizer.Events.IndexModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h1>Events</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in Model.Events)
+        {
+            <tr>
+                <td>@eventItem.Title</td>
+                <td>@eventItem.Date.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@eventItem.Location</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@eventItem.Id" class="btn btn-primary">Edit</a>
+                    <a asp-page="./Details" asp-route-id="@eventItem.Id" class="btn btn-info">Details</a>
+                    <a asp-page="./Delete" asp-route-id="@eventItem.Id" class="btn btn-danger">Delete</a>
+                    <a asp-page="./EventAnalytics" asp-route-eventId="@eventItem.Id" class="btn btn-warning">Analytics</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Create" class="btn btn-success">Create New Event</a>

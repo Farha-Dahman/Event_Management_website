@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #1e0a3c;
+    --secondary-color: #3659e3; /* Green */
+    --accent-color: #e74c3c; /* Red */
+    --background-color: #f4f4f4; /* Light Gray */
+    --text-color: #333333; /* Dark Gray */
+    --light-text-color: #ffffff; /* White */
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/*  */
+.profilePicture{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.avatar-profile-picture {
+    width: 45px;
+    height: 45px;
+    object-fit:cover;
+}
+
+/* header */
+.nav {
+    background-color: var(--primary-color);
+}
+
+.hero-section {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('/images/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
