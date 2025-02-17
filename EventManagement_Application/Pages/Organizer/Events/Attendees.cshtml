@@ -1,0 +1,41 @@
+﻿@page
+@model EventManagement_Application.Pages.Organizer.Events.AttendeesModel
+@{
+    ViewData["Title"] = "Attendees";
+}
+
+<h2>@Model.Event.Title - Attendees</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Attendee Name</th>
+            <th>Email</th>
+            <th>Date Of Birth</th>
+            <th>Ticket Type</th>
+            <th>Registration Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var attendee in Model.Attendees)
+        {
+            <tr>
+                <td>@attendee.User.UserName</td>
+                <td>@attendee.User.Email</td>
+                <td>@attendee.User.DateOfBirth</td>
+                <td>@attendee.Ticket.TicketType</td>
+                <td>@attendee.RegistrationDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="ticketUserId" value="@attendee.UserId" />
+                        <input type="hidden" name="eventId" value="@Model.Event.Id" />
+                        <button type="submit" asp-page-handler="Remove" class="btn btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Index" class="btn btn-primary">Back to Events</a>

@@ -1,11 +1,13 @@
 using EventManagement_Application.Data;
 using EventManagement_Application.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventManagement_Application.Pages.Organizer.Events
 {
+    [Authorize(Roles = "Organizer")]
     public class EventAnalyticsModel : PageModel
     {
         private readonly ApplicationDbContext _context;

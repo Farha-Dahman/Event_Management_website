@@ -1,0 +1,64 @@
+﻿@page "{ticketId:int}"
+@model EventManagement_Application.Pages.Organizer.Tickets.EditTicketModel
+@{
+    ViewData["Title"] = "Edit Ticket";
+}
+
+<h1>Edit Ticket for @Model.Ticket.Event.Title</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Ticket.Id" />
+    <input type="hidden" asp-for="Ticket.EventId" />
+
+    <div class="form-group">
+        <label asp-for="Ticket.Price">Ticket Price</label>
+        <input asp-for="Ticket.Price" class="form-control price-input" type="number" step="0.01" min="0" />
+        <span asp-validation-for="Ticket.Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ticket.TicketType">Ticket Type</label>
+        <input asp-for="Ticket.TicketType" class="form-control ticket-type-input" readonly="readonly" />
+        <span asp-validation-for="Ticket.TicketType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ticket.Quantity">Quantity</label>
+        <input asp-for="Ticket.Quantity" class="form-control" type="number" min="1" required />
+        <span asp-validation-for="Ticket.Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ticket.AvailableTickets">Available Seats</label>
+        <input asp-for="Ticket.AvailableTickets" class="form-control" type="number" min="1" required />
+        <span asp-validation-for="Ticket.AvailableTickets" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ticket.OpenDate">Open Date</label>
+        <input asp-for="Ticket.OpenDate" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Ticket.OpenDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ticket.CloseDate">Close Date</label>
+        <input asp-for="Ticket.CloseDate" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Ticket.CloseDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a asp-page="../Events/Details" asp-route-id="@Model.Ticket.EventId" class="btn btn-secondary">Back to Event</a>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let priceInput = document.querySelector('.price-input');
+        let ticketTypeInput = document.querySelector('.ticket-type-input');
+
+        function updateTicketType() {
+            if (parseFloat(priceInput.value) === 0) {
+                ticketTypeInput.value = "Free";
+            } else {
+                ticketTypeInput.removeAttribute("readonly");
+            }
+        }
+
+        priceInput.addEventListener("input", updateTicketType);
+        updateTicketType();
+    });
+</script>

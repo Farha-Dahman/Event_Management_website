@@ -1,0 +1,46 @@
+﻿@page
+@model EventManagement_Application.Pages.Attendee.ViewEventsModel
+@{
+}
+@{
+    ViewData["Title"] = "All Events";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+    <div class="row">
+        @foreach (var eventItem in Model.Events)
+        {
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    @if (eventItem.EventImage != null)
+                    {
+                        <img src="data:image/png;base64,@Convert.ToBase64String(eventItem.EventImage)" alt="Event Image" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@eventItem.Title</h5>
+                        <p class="card-text text-muted">@eventItem.CreationDate.ToString("MMMM dd, yyyy") - @eventItem.Location</p>
+                        <p class="card-text">@eventItem.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="/EventDetails?id=@eventItem.Id" class="btn btn-primary">View Details</a>
+                            @* <button class="btn btn-outline-danger"> *@
+                            @*     <i class="bi bi-heart"></i> Like (@eventItem.Likes) *@
+                            @* </button> *@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll(".btn-outline-danger").forEach(button => {
+            button.addEventListener("click", function () {
+                let count = parseInt(this.innerText.match(/\d+/)[0]);
+                this.innerHTML = `<i class='bi bi-heart-fill'></i> Like (${count + 1})`;
+            });
+        });
+    </script>
+}

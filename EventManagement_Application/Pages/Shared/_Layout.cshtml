@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="~/EventManagement_Application.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -17,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow nav justify-content-center">
             <div class="container mx-5">
-                <a class="navbar-brand text-white" asp-area="" asp-page="/Index">Eventify</a>
+                <a class="navbar-brand text-white fw-bold" asp-area="" asp-page="/Index">Eventify</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,24 +26,33 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-white fw-bold" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-white fw-bold" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Admin/Roles/Index">Roles</a>
+                                <a class="nav-link text-white fw-bold" asp-area="" asp-page="/Admin/Roles/Index">Roles</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Admin/Roles/UserRoles">Users</a>
+                                <a class="nav-link text-white fw-bold" asp-area="" asp-page="/Admin/Roles/UserRoles">Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold" asp-area="" asp-page="/Admin/Requests/OrganizerRequests">Requests</a>
                             </li>
                         }
                         @if (User.IsInRole("Organizer"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-page="/Organizer/Events/Index">Manage Events</a>
+                                <a class="nav-link text-white fw-bold" asp-page="/Organizer/Events/Index">Manage Events</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Organizer") || User.IsInRole("User"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold" asp-page="/Attendee/Requests">My Requests</a>
                             </li>
                         }
                     </ul>
@@ -57,9 +67,42 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Eventify  <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="footer margin text-white text-center align-items-center mt-5 py-3 bg-footer">
+        <div class="container d-flex justify-content-center">
+            <div class="row container flex-row py-5 align-items-center d-flex justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="d-flex flex-column align-items-center">
+                        <img class="logo mb-2" src="./images/light-LogoEventify.png" alt="Eventify Logo" />
+                            <a class="btn btn-light my-3 text-primary-color" to="#">Join With Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+                    <ul>
+                        <li><h4 class="mb-3">THE BASICS</h4></li>
+                        <li><a to="about" class="link">About Eventify</a></li>
+                        <li><a to="contactUs" class="link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class='col-lg-3 col-md-6 col-sm-12 my-3'>
+                    <ul>
+                        <li><h4 class="mb-3">CONTACT INFO</h4></li>
+                        <li>eventifyTeam@gmail.com</li>
+                        <li>+999 999 999</li>
+                    </ul>
+                </div>
+                <div class="icons col-lg-3 col-md-6 col-sm-12 d-flex flex-column">
+                    <h4 class="d-flex justify-content-center ms-4 mb-3">FOLLOW US</h4>
+                    <ul class="flex-row d-flex justify-content-center">
+                        <li class="m-2"><i class="fa-brands fa-facebook"></i></li>
+                        <li class="m-2"><i class="fa-brands fa-instagram"></i></li>
+                        <li class="m-2"><i class="fa-brands fa-x-twitter"></i></li>
+                        <li class="m-2"><i class="fa-brands fa-pinterest"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="footer border-top text-white">
+            &copy; 2025 - Eventify.com
         </div>
     </footer>
 

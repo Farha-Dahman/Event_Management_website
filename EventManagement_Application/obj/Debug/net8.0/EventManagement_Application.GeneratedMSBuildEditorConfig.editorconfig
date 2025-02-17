@@ -188,6 +188,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Admin/Requests/OrganizerRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVxdWVzdHNcT3JnYW5pemVyUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Admin/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -200,6 +204,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcVXNlclJvbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/EventBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcRXZlbnRCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/Requests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/ViewEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcVmlld0V2ZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -208,12 +224,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Events/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXEV2ZW50c1xDcmVhdGUuY3NodG1s
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Events/Attendees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXEV2ZW50c1xBdHRlbmRlZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Events/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXEV2ZW50c1xEZWxldGUuY3NodG1s
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Events/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXEV2ZW50c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Events/Details.cshtml]
@@ -230,6 +246,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Events/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXEV2ZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Tickets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXFRpY2tldHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Organizer/Tickets/EditTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pemVyXFRpY2tldHNcRWRpdFRpY2tldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Privacy.cshtml]

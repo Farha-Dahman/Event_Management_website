@@ -1,11 +1,13 @@
 using EventManagement_Application.Data;
 using EventManagement_Application.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventManagement_Application.Pages.Organizer.Events
 {
+    [Authorize(Roles = "Organizer")]
     public class EditModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -68,7 +70,7 @@ namespace EventManagement_Application.Pages.Organizer.Events
                 Console.WriteLine(existingEvent.Title);
 
                 existingEvent.Description = Event.Description;
-                existingEvent.Date = Event.Date;
+                existingEvent.CreationDate = Event.CreationDate;
                 existingEvent.Location = Event.Location;
                 existingEvent.Category = Event.Category;
                 existingEvent.Mode = Event.Mode;

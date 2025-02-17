@@ -1,0 +1,42 @@
+﻿@page
+@model EventManagement_Application.Pages.Admin.Requests.OrganizerRequestsModel
+@{
+    ViewData["Title"] = "Organizer Requests";
+}
+
+<h2>Organizer Requests</h2>
+
+@if (Model.PendingRequests.Count == 0)
+{
+    <p class="my-5">No pending organizer requests.</p>
+}
+else
+{
+    <table class="table my-5">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Request Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model.PendingRequests)
+            {
+                <tr>
+                    <td>@request.User.UserName</td>
+                    <td>@request.User.Email</td>
+                    <td>@request.RequestDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="userId" value="@request.UserId" />
+                            <button type="submit" name="approve" value="true" class="btn btn-success">Approve</button>
+                            <button type="submit" name="reject" value="true" class="btn btn-danger">Reject</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

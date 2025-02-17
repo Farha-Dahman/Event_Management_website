@@ -16,5 +16,7 @@ namespace EventManagement_Application.Models
 
         [ForeignKey("UserId")]
         public ApplicationUser User { get; set; }
+
+        public DateTime RegistrationDate { get; set; } = DateTime.Now;
     }
 }

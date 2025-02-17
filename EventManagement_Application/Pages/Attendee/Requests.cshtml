@@ -1,0 +1,37 @@
+﻿@page
+@model EventManagement_Application.Pages.Attendee.RequestsModel
+@{
+    ViewData["Title"] = "My Requests";
+}
+
+<h2>My Requests</h2>
+
+@if (Model.MyRequests.Count == 0)
+{
+    <p>You have not submitted any requests.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Request Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model.MyRequests)
+            {
+                <tr>
+                    <td>@request.RequestDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        <span class="badge
+                            @(request.Status == "Pending" ? "bg-warning" : request.Status == "Approved" ? "bg-success" : "bg-danger")">
+                            @request.Status
+                        </span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

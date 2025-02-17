@@ -15,7 +15,8 @@ namespace EventManagement_Application.Data
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-
+        public DbSet<OrganizerRequest> OrganizerRequests { get; set; }
+        public object TicketUsers { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -33,19 +34,19 @@ namespace EventManagement_Application.Data
             builder.Entity<TicketUser>()
                 .HasKey(tu => new { tu.TicketId, tu.UserId });
 
-            // Define relationship with Ticket (Restrict delete behavior)
+            // Define relationship with Ticket
             builder.Entity<TicketUser>()
                 .HasOne(tu => tu.Ticket)
                 .WithMany(t => t.TicketUsers)
                 .HasForeignKey(tu => tu.TicketId)
                 .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete
 
-            // Define relationship with ApplicationUser (Restrict delete behavior)
+            // Define relationship with ApplicationUser
             builder.Entity<TicketUser>()
                 .HasOne(tu => tu.User)
                 .WithMany(u => u.TicketUsers)
                 .HasForeignKey(tu => tu.UserId)
-                .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

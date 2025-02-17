@@ -18,12 +18,16 @@ namespace EventManagement_Application.Models
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "Event Date & Time")]
-        public DateTime Date { get; set; }
-
-        [Required]
         [StringLength(300, ErrorMessage = "Location cannot exceed 200 characters.")]
         public string Location { get; set; }
+
+        [Required]
+        [Display(Name = "Event Date & Time")]
+        public DateTime EventDate { get; set; } = DateTime.Now;
+
+        [Required]
+        [Display(Name = "Event Creation Date")]
+        public DateTime CreationDate { get; set; } = DateTime.Now;
 
         public byte[]? EventImage { get; set; } // Store image path or URL
 

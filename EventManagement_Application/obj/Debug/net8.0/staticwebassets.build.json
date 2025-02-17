@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6InRrmjs/OXiL2DR1Us6RRr1zXEmlWHn9CQNWv33+tQ=",
+  "Hash": "AYucUQdgtyooZfXvtXo0f0JdCt4M/DmlFLp1Di1tre0=",
   "Source": "EventManagement_Application",
   "BasePath": "_content/EventManagement_Application",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zcuua3sgnf",
-      "Integrity": "M+uSvSycdD5oRnbhUwoq6/yGTtaqgWa8GAKS9e2XqX4=",
+      "Fingerprint": "02cuu52md6",
+      "Integrity": "eLV3fXmuGk68/kkyYN8l4UwuP0jgr+9YlJiafLm7zHk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1361,6 +1361,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Airbnb.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Airbnb#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5asbvb42y2",
+      "Integrity": "E1GlgLhpDPyL7CTVC0oeE2EeJw6UPbxAMe2c0490T2k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Airbnb.svg"
+    },
+    {
       "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image.jpg",
       "SourceId": "EventManagement_Application",
       "SourceType": "Discovered",
@@ -1382,6 +1403,237 @@
       "OriginalItemSpec": "wwwroot\\images\\background-image.jpg"
     },
     {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image-third.jpg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/background-image-third#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9q6awcowwd",
+      "Integrity": "kZCQcsMsKuoG9lq6QNYikzmMe/kyzD3cOvWFApGDTTM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\background-image-third.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-img3.jpg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/background-img3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4696ageu1v",
+      "Integrity": "FKL1GAHPoQzIxIsC54DHk6WR6eZ3LR7ihMfCAvF6B1E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\background-img3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-slide3.jpg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/background-slide3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fbhqs2acdv",
+      "Integrity": "K16AqUl/9H49bmduDUwHlhBJnRv+/OMtQ5Cjy9rsjCM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\background-slide3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Google#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bnjl7fah7n",
+      "Integrity": "tznOgA9h50AymDQWNfiVrCkbiW3NPxU/Ou1/uZuC0Cg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Google.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/light-LogoEventify#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vgyuv6dnq7",
+      "Integrity": "//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\light-LogoEventify.png"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Login-image.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Login-image#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m5io23k1ks",
+      "Integrity": "6h/0WSVmMLE1yLBT9QE5g4mEDT+OSxUqVGYSisWAg5A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Login-image.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Mailchimp.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Mailchimp#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a35zz68t5v",
+      "Integrity": "hp/g5WRIClABrsLQGskq42EfDEjrk22H3LgU/kEJDJ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Mailchimp.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\management-office.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/management-office#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s4lccpgp47",
+      "Integrity": "/MX7Ie6w7UlQQUGJVeqHgUNva82NeLgfk9ZzZZLfJLY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\management-office.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Messages-amico.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Messages-amico#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kbu4tahh0k",
+      "Integrity": "gJjYWte4qBv0hh98Tvoi95LLblNKaIbCXSuVJ93d8UA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Messages-amico.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Microsoft.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Microsoft#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ernosxsl3r",
+      "Integrity": "trFRJp9D4D77Gd0qX1eEdTGv8dekYXYnW7u94qj+MIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Microsoft.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\organizer_event.jpeg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/organizer_event#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rk4m7zxuu9",
+      "Integrity": "qyO271d7d/MKLgs/HxMIJMSMo1gD6Ut+Nhn0U9u2J2s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\organizer_event.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\profilePicture.jpg",
       "SourceId": "EventManagement_Application",
       "SourceType": "Discovered",
@@ -1401,6 +1653,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\profilePicture.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\SignUp-image.png",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/SignUp-image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zt2330h1mb",
+      "Integrity": "F2S//iUb11hg8LCs/HqZd8asEi1UGF06uJ3xf3SOvwY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\SignUp-image.png"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Spotify.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Spotify#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8m8eed1svd",
+      "Integrity": "IFVc2yWGJylYZjGQucOH52UVrt8+XOjgm9Og+w2khJ0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Spotify.svg"
+    },
+    {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\uber.svg",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/uber#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "97ypvfg8mj",
+      "Integrity": "ZZTxxfhpli0f2WKJZ8lSGZQGprkDiU8KN3wFCjSZ6tA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\uber.svg"
     },
     {
       "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\js\\site.js",
@@ -2623,6 +2938,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.02cuu52md6.css",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4759"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eLV3fXmuGk68/kkyYN8l4UwuP0jgr+9YlJiafLm7zHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Feb 2025 06:58:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02cuu52md6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eLV3fXmuGk68/kkyYN8l4UwuP0jgr+9YlJiafLm7zHk="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2633,7 +2993,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1302"
+          "Value": "4759"
         },
         {
           "Name": "Content-Type",
@@ -2641,11 +3001,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"M+uSvSycdD5oRnbhUwoq6/yGTtaqgWa8GAKS9e2XqX4=\""
+          "Value": "\"eLV3fXmuGk68/kkyYN8l4UwuP0jgr+9YlJiafLm7zHk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 06:52:26 GMT"
+          "Value": "Mon, 17 Feb 2025 06:58:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2655,52 +3015,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-M+uSvSycdD5oRnbhUwoq6/yGTtaqgWa8GAKS9e2XqX4="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.zcuua3sgnf.css",
-      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1302"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M+uSvSycdD5oRnbhUwoq6/yGTtaqgWa8GAKS9e2XqX4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 06:52:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zcuua3sgnf"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-M+uSvSycdD5oRnbhUwoq6/yGTtaqgWa8GAKS9e2XqX4="
+          "Value": "sha256-eLV3fXmuGk68/kkyYN8l4UwuP0jgr+9YlJiafLm7zHk="
         }
       ]
     },
@@ -2727,7 +3042,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 21:57:55 GMT"
+          "Value": "Mon, 17 Feb 2025 08:29:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,7 +3087,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 21:57:55 GMT"
+          "Value": "Mon, 17 Feb 2025 08:29:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2817,7 +3132,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 21:57:55 GMT"
+          "Value": "Mon, 17 Feb 2025 08:29:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2854,7 +3169,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 21:57:55 GMT"
+          "Value": "Mon, 17 Feb 2025 08:29:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5171,6 +5486,88 @@
       ]
     },
     {
+      "Route": "images/Airbnb.5asbvb42y2.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Airbnb.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8507"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E1GlgLhpDPyL7CTVC0oeE2EeJw6UPbxAMe2c0490T2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5asbvb42y2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Airbnb.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-E1GlgLhpDPyL7CTVC0oeE2EeJw6UPbxAMe2c0490T2k="
+        }
+      ]
+    },
+    {
+      "Route": "images/Airbnb.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Airbnb.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8507"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E1GlgLhpDPyL7CTVC0oeE2EeJw6UPbxAMe2c0490T2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-E1GlgLhpDPyL7CTVC0oeE2EeJw6UPbxAMe2c0490T2k="
+        }
+      ]
+    },
+    {
       "Route": "images/background-image.jpg",
       "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image.jpg",
       "Selectors": [],
@@ -5253,6 +5650,908 @@
       ]
     },
     {
+      "Route": "images/background-image-third.9q6awcowwd.jpg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image-third.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155875"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kZCQcsMsKuoG9lq6QNYikzmMe/kyzD3cOvWFApGDTTM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 20:13:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9q6awcowwd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/background-image-third.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kZCQcsMsKuoG9lq6QNYikzmMe/kyzD3cOvWFApGDTTM="
+        }
+      ]
+    },
+    {
+      "Route": "images/background-image-third.jpg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image-third.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155875"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kZCQcsMsKuoG9lq6QNYikzmMe/kyzD3cOvWFApGDTTM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 20:13:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kZCQcsMsKuoG9lq6QNYikzmMe/kyzD3cOvWFApGDTTM="
+        }
+      ]
+    },
+    {
+      "Route": "images/background-img3.4696ageu1v.jpg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-img3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3509712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FKL1GAHPoQzIxIsC54DHk6WR6eZ3LR7ihMfCAvF6B1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 20:22:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4696ageu1v"
+        },
+        {
+          "Name": "label",
+          "Value": "images/background-img3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FKL1GAHPoQzIxIsC54DHk6WR6eZ3LR7ihMfCAvF6B1E="
+        }
+      ]
+    },
+    {
+      "Route": "images/background-img3.jpg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-img3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3509712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FKL1GAHPoQzIxIsC54DHk6WR6eZ3LR7ihMfCAvF6B1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 20:22:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FKL1GAHPoQzIxIsC54DHk6WR6eZ3LR7ihMfCAvF6B1E="
+        }
+      ]
+    },
+    {
+      "Route": "images/background-slide3.fbhqs2acdv.jpg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-slide3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "476955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K16AqUl/9H49bmduDUwHlhBJnRv+/OMtQ5Cjy9rsjCM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Feb 2025 06:58:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbhqs2acdv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/background-slide3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K16AqUl/9H49bmduDUwHlhBJnRv+/OMtQ5Cjy9rsjCM="
+        }
+      ]
+    },
+    {
+      "Route": "images/background-slide3.jpg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-slide3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "476955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K16AqUl/9H49bmduDUwHlhBJnRv+/OMtQ5Cjy9rsjCM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Feb 2025 06:58:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K16AqUl/9H49bmduDUwHlhBJnRv+/OMtQ5Cjy9rsjCM="
+        }
+      ]
+    },
+    {
+      "Route": "images/Google.bnjl7fah7n.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2709"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tznOgA9h50AymDQWNfiVrCkbiW3NPxU/Ou1/uZuC0Cg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:43:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bnjl7fah7n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Google.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tznOgA9h50AymDQWNfiVrCkbiW3NPxU/Ou1/uZuC0Cg="
+        }
+      ]
+    },
+    {
+      "Route": "images/Google.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2709"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tznOgA9h50AymDQWNfiVrCkbiW3NPxU/Ou1/uZuC0Cg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:43:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tznOgA9h50AymDQWNfiVrCkbiW3NPxU/Ou1/uZuC0Cg="
+        }
+      ]
+    },
+    {
+      "Route": "images/light-LogoEventify.png",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 18:54:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI="
+        }
+      ]
+    },
+    {
+      "Route": "images/light-LogoEventify.vgyuv6dnq7.png",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 18:54:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vgyuv6dnq7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/light-LogoEventify.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI="
+        }
+      ]
+    },
+    {
+      "Route": "images/Login-image.m5io23k1ks.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Login-image.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27217"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6h/0WSVmMLE1yLBT9QE5g4mEDT+OSxUqVGYSisWAg5A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 00:11:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m5io23k1ks"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Login-image.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6h/0WSVmMLE1yLBT9QE5g4mEDT+OSxUqVGYSisWAg5A="
+        }
+      ]
+    },
+    {
+      "Route": "images/Login-image.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Login-image.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27217"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6h/0WSVmMLE1yLBT9QE5g4mEDT+OSxUqVGYSisWAg5A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 00:11:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6h/0WSVmMLE1yLBT9QE5g4mEDT+OSxUqVGYSisWAg5A="
+        }
+      ]
+    },
+    {
+      "Route": "images/Mailchimp.a35zz68t5v.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Mailchimp.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12760"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hp/g5WRIClABrsLQGskq42EfDEjrk22H3LgU/kEJDJ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a35zz68t5v"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Mailchimp.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hp/g5WRIClABrsLQGskq42EfDEjrk22H3LgU/kEJDJ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Mailchimp.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Mailchimp.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12760"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hp/g5WRIClABrsLQGskq42EfDEjrk22H3LgU/kEJDJ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hp/g5WRIClABrsLQGskq42EfDEjrk22H3LgU/kEJDJ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/management-office.s4lccpgp47.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\management-office.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/MX7Ie6w7UlQQUGJVeqHgUNva82NeLgfk9ZzZZLfJLY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 13:01:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s4lccpgp47"
+        },
+        {
+          "Name": "label",
+          "Value": "images/management-office.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/MX7Ie6w7UlQQUGJVeqHgUNva82NeLgfk9ZzZZLfJLY="
+        }
+      ]
+    },
+    {
+      "Route": "images/management-office.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\management-office.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/MX7Ie6w7UlQQUGJVeqHgUNva82NeLgfk9ZzZZLfJLY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 13:01:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/MX7Ie6w7UlQQUGJVeqHgUNva82NeLgfk9ZzZZLfJLY="
+        }
+      ]
+    },
+    {
+      "Route": "images/Messages-amico.kbu4tahh0k.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Messages-amico.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31276"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gJjYWte4qBv0hh98Tvoi95LLblNKaIbCXSuVJ93d8UA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Feb 2025 06:31:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kbu4tahh0k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Messages-amico.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gJjYWte4qBv0hh98Tvoi95LLblNKaIbCXSuVJ93d8UA="
+        }
+      ]
+    },
+    {
+      "Route": "images/Messages-amico.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Messages-amico.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31276"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gJjYWte4qBv0hh98Tvoi95LLblNKaIbCXSuVJ93d8UA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Feb 2025 06:31:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gJjYWte4qBv0hh98Tvoi95LLblNKaIbCXSuVJ93d8UA="
+        }
+      ]
+    },
+    {
+      "Route": "images/Microsoft.ernosxsl3r.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Microsoft.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6488"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"trFRJp9D4D77Gd0qX1eEdTGv8dekYXYnW7u94qj+MIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:43:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ernosxsl3r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Microsoft.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-trFRJp9D4D77Gd0qX1eEdTGv8dekYXYnW7u94qj+MIA="
+        }
+      ]
+    },
+    {
+      "Route": "images/Microsoft.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Microsoft.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6488"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"trFRJp9D4D77Gd0qX1eEdTGv8dekYXYnW7u94qj+MIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:43:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-trFRJp9D4D77Gd0qX1eEdTGv8dekYXYnW7u94qj+MIA="
+        }
+      ]
+    },
+    {
+      "Route": "images/organizer_event.jpeg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\organizer_event.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qyO271d7d/MKLgs/HxMIJMSMo1gD6Ut+Nhn0U9u2J2s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 13:54:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qyO271d7d/MKLgs/HxMIJMSMo1gD6Ut+Nhn0U9u2J2s="
+        }
+      ]
+    },
+    {
+      "Route": "images/organizer_event.rk4m7zxuu9.jpeg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\organizer_event.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qyO271d7d/MKLgs/HxMIJMSMo1gD6Ut+Nhn0U9u2J2s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 13:54:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rk4m7zxuu9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/organizer_event.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qyO271d7d/MKLgs/HxMIJMSMo1gD6Ut+Nhn0U9u2J2s="
+        }
+      ]
+    },
+    {
       "Route": "images/profilePicture.6l6p0g1zxc.jpg",
       "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\profilePicture.jpg",
       "Selectors": [],
@@ -5331,6 +6630,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-mv0uOdmielZ21tQJ2UE1+Drh2Lr+T3ImvW14QQE16M0="
+        }
+      ]
+    },
+    {
+      "Route": "images/SignUp-image.png",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\SignUp-image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "298042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F2S//iUb11hg8LCs/HqZd8asEi1UGF06uJ3xf3SOvwY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Feb 2025 22:42:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F2S//iUb11hg8LCs/HqZd8asEi1UGF06uJ3xf3SOvwY="
+        }
+      ]
+    },
+    {
+      "Route": "images/SignUp-image.zt2330h1mb.png",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\SignUp-image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "298042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F2S//iUb11hg8LCs/HqZd8asEi1UGF06uJ3xf3SOvwY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Feb 2025 22:42:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zt2330h1mb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/SignUp-image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F2S//iUb11hg8LCs/HqZd8asEi1UGF06uJ3xf3SOvwY="
+        }
+      ]
+    },
+    {
+      "Route": "images/Spotify.8m8eed1svd.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Spotify.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9603"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IFVc2yWGJylYZjGQucOH52UVrt8+XOjgm9Og+w2khJ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8m8eed1svd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Spotify.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IFVc2yWGJylYZjGQucOH52UVrt8+XOjgm9Og+w2khJ0="
+        }
+      ]
+    },
+    {
+      "Route": "images/Spotify.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Spotify.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9603"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IFVc2yWGJylYZjGQucOH52UVrt8+XOjgm9Og+w2khJ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IFVc2yWGJylYZjGQucOH52UVrt8+XOjgm9Og+w2khJ0="
+        }
+      ]
+    },
+    {
+      "Route": "images/uber.97ypvfg8mj.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\uber.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZZTxxfhpli0f2WKJZ8lSGZQGprkDiU8KN3wFCjSZ6tA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "97ypvfg8mj"
+        },
+        {
+          "Name": "label",
+          "Value": "images/uber.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZZTxxfhpli0f2WKJZ8lSGZQGprkDiU8KN3wFCjSZ6tA="
+        }
+      ]
+    },
+    {
+      "Route": "images/uber.svg",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\uber.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZZTxxfhpli0f2WKJZ8lSGZQGprkDiU8KN3wFCjSZ6tA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 12:44:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZZTxxfhpli0f2WKJZ8lSGZQGprkDiU8KN3wFCjSZ6tA="
         }
       ]
     },

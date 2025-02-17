@@ -6,6 +6,67 @@
     ViewData["Title"] = "Create Event";
 }
 
+@* <h1>Create Event</h1> *@
+
+@* <form method="post" enctype="multipart/form-data"> *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.Title"></label> *@
+@*         <input asp-for="Event.Title" class="form-control" /> *@
+@*         <span asp-validation-for="Event.Title" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.Description"></label> *@
+@*         <textarea asp-for="Event.Description" class="form-control"></textarea> *@
+@*         <span asp-validation-for="Event.Description" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.StartDate"></label> *@
+@*         <input asp-for="Event.StartDate" class="form-control" type="datetime-local" /> *@
+@*         <span asp-validation-for="Event.StartDate" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.EndDate"></label> *@
+@*         <input asp-for="Event.EndDate" class="form-control" type="datetime-local" /> *@
+@*         <span asp-validation-for="Event.EndDate" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.Location"></label> *@
+@*         <input asp-for="Event.Location" class="form-control" /> *@
+@*         <span asp-validation-for="Event.Location" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.EventImage"></label> *@
+@*         <input asp-for="Event.EventImage" type="file" class="form-control" /> *@
+@*         <span asp-validation-for="Event.EventImage" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.Category"></label> *@
+@*         <input asp-for="Event.Category" class="form-control" /> *@
+@*         <span asp-validation-for="Event.Category" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Event.Mode"></label> *@
+@*         <select asp-for="Event.Mode" class="form-control"> *@
+@*             <option value="">Select Mode</option> *@
+@*             @foreach (var mode in Enum.GetValues(typeof(EventMode)).Cast<EventMode>()) *@
+@*             { *@
+@*                 <option value="@mode">@mode</option> *@
+@*             } *@
+@*         </select> *@
+@*         <span asp-validation-for="Event.Mode" class="text-danger"></span> *@
+@*     </div> *@
+
+@*     <input type="hidden" asp-for="Event.OrganizerId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" /> *@
+@*     <button type="submit" class="btn btn-primary">Create</button> *@
+@*     <a asp-page="./Index" class="btn btn-secondary">Cancel</a> *@
+@* </form> *@
 <h1>Create Event</h1>
 
 <form method="post" enctype="multipart/form-data">
@@ -20,13 +81,13 @@
         <textarea asp-for="Event.Description" class="form-control"></textarea>
         <span asp-validation-for="Event.Description" class="text-danger"></span>
     </div>
-
     <div class="form-group">
-        <label asp-for="Event.Date"></label>
-        <input asp-for="Event.Date" class="form-control" type="datetime-local" />
-        <span asp-validation-for="Event.Date" class="text-danger"></span>
+        <label asp-for="Event.EventDate"></label>
+        <input asp-for="Event.EventDate" class="form-control" type="datetime-local"
+               value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
+               min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+        <span asp-validation-for="Event.EventDate" class="text-danger"></span>
     </div>
-
     <div class="form-group">
         <label asp-for="Event.Location"></label>
         <input asp-for="Event.Location" class="form-control" />
@@ -58,5 +119,9 @@
     </div>
 
     <input type="hidden" asp-for="Event.OrganizerId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" />
-    <button type="submit" class="btn btn-primary">Create</button>
+
+    <div class="d-block my-5">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+    </div>
 </form>

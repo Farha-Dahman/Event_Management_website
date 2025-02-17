@@ -13,12 +13,72 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Airbnb.svg",
+      "PackagePath": "staticwebassets\\images\\Airbnb.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
+      "PackagePath": "staticwebassets\\images\\Google.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Login-image.svg",
+      "PackagePath": "staticwebassets\\images\\Login-image.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Mailchimp.svg",
+      "PackagePath": "staticwebassets\\images\\Mailchimp.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Messages-amico.svg",
+      "PackagePath": "staticwebassets\\images\\Messages-amico.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Microsoft.svg",
+      "PackagePath": "staticwebassets\\images\\Microsoft.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\SignUp-image.png",
+      "PackagePath": "staticwebassets\\images\\SignUp-image.png"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Spotify.svg",
+      "PackagePath": "staticwebassets\\images\\Spotify.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image-third.jpg",
+      "PackagePath": "staticwebassets\\images\\background-image-third.jpg"
+    },
+    {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image.jpg",
       "PackagePath": "staticwebassets\\images\\background-image.jpg"
     },
     {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-img3.jpg",
+      "PackagePath": "staticwebassets\\images\\background-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-slide3.jpg",
+      "PackagePath": "staticwebassets\\images\\background-slide3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
+      "PackagePath": "staticwebassets\\images\\light-LogoEventify.png"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\management-office.svg",
+      "PackagePath": "staticwebassets\\images\\management-office.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\organizer_event.jpeg",
+      "PackagePath": "staticwebassets\\images\\organizer_event.jpeg"
+    },
+    {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\profilePicture.jpg",
       "PackagePath": "staticwebassets\\images\\profilePicture.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\uber.svg",
+      "PackagePath": "staticwebassets\\images\\uber.svg"
     },
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\js\\site.js",

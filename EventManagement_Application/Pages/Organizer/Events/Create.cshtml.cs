@@ -1,11 +1,14 @@
 using EventManagement_Application.Data;
 using EventManagement_Application.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 
 namespace EventManagement_Application.Pages.Organizer.Events
 {
+    [Authorize(Roles = "Organizer")]
     public class CreateModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -20,7 +23,10 @@ namespace EventManagement_Application.Pages.Organizer.Events
         [BindProperty]
         public Event Event { get; set; }
 
-        public IActionResult OnPost()
+        [BindProperty]
+        public List<Ticket> Tickets { get; set; } = new();
+
+        public async Task<IActionResult> OnPost()
         {
             // Check if the user is authenticated
             if (User.Identity == null || !User.Identity.IsAuthenticated)
@@ -42,14 +48,34 @@ namespace EventManagement_Application.Pages.Organizer.Events
 
             Event.OrganizerId = userId;
 
+            // Process the uploaded file (EventImage) if it exists
+            if (Request.Form.Files.Count > 0)  // Check if there are files uploaded
+            {
+                var file = Request.Form.Files[0];  // Get the first file (assuming only one file is uploaded)
+                if (file.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await file.CopyToAsync(memoryStream); // Copy the file to the memory stream
+                        Event.EventImage = memoryStream.ToArray(); // Convert memory stream to byte array
+                    }
+                }
+            }
+
             _logger.LogInformation("Creating event with Title: {Title}, Date: {Date}, OrganizerId: {OrganizerId}",
-                Event.Title, Event.Date, Event.OrganizerId);
+                Event.Title, Event.CreationDate, Event.OrganizerId);
 
             try
             {
+                // Save Event
                 _context.Events.Add(Event);
-                _context.SaveChanges();
-                _logger.LogInformation("Event created successfully.");
+                await _context.SaveChangesAsync();
+
+                // Ensure Event.Id is populated
+                var eventId = Event.Id;
+
+                _logger.LogInformation("Event created successfully with tickets.");
+                return RedirectToPage("../Tickets/Create", new { eventId = eventId });
             }
             catch (Exception ex)
             {
@@ -57,8 +83,7 @@ namespace EventManagement_Application.Pages.Organizer.Events
                 ModelState.AddModelError(string.Empty, "An error occurred while saving the event.");
                 return Page();
             }
-
-            return RedirectToPage("./Index");
         }
+
     }
 }

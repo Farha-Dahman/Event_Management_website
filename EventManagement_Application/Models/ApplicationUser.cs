@@ -19,6 +19,8 @@ namespace EventManagement_Application.Models
 
         public byte[]? ProfilePicture { get; set; }
 
+        public bool OrganizerRequestPending { get; set; } = false;
+
         public ICollection<TicketUser>? TicketUsers { get; set; }
     }
 }
