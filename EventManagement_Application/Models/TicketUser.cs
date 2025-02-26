@@ -18,5 +18,10 @@ namespace EventManagement_Application.Models
         public ApplicationUser User { get; set; }
 
         public DateTime RegistrationDate { get; set; } = DateTime.Now;
+
+        [Required]
+        public int Quantity { get; set; }
+
+
     }
 }

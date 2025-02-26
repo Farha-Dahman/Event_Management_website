@@ -1,104 +1,202 @@
-﻿@page
+﻿@* @page *@
+@* @model EventManagement_Application.Pages.Organizer.Events.DetailsModel *@
+@* @using Microsoft.AspNetCore.Identity *@
+@* @inject SignInManager<ApplicationUser> SignInManager *@
+@* @inject UserManager<ApplicationUser> UserManager *@
+@* @{ *@
+@*     ViewData["Title"] = "Details"; *@
+@* } *@
+
+@* <h1>Event Details</h1> *@
+
+@* <div> *@
+@*     <h4>@Model.Event.Title</h4> *@
+@*     <hr /> *@
+@*     <dl class="row"> *@
+@*         <dt class="col-sm-2">Description</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.Description</dd> *@
+@*         <dt class="col-sm-2">Date</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.CreationDate.ToString("yyyy-MM-dd HH:mm")</dd> *@
+@*         <dt class="col-sm-2">Location</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.Location</dd> *@
+@*         <dt class="col-sm-2">Category</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.Category</dd> *@
+@*         <dt class="col-sm-2">Mode</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.Mode</dd> *@
+@*         <dt class="col-sm-2">Event Date</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.EventDate</dd> *@
+@*         <dt class="col-sm-2">Organizer</dt> *@
+@*         <dd class="col-sm-10">@Model.Event.OrganizerId</dd> *@
+@*     </dl> *@
+@*     <h3>Tickets</h3> *@
+@*     @if (Model.Tickets != null && Model.Tickets.Any()) *@
+@*     { *@
+@*         <div class="row"> *@
+@*             @foreach (var ticket in Model.Tickets) *@
+@*             { *@
+@*                 <div class="col-md-4"> *@
+@*                     <div class="card shadow-sm mb-3"> *@
+@*                         <div class="card-body"> *@
+@*                             <h5 class="card-title">@ticket.TicketType Ticket</h5> *@
+@*                             <p class="card-text"> *@
+@*                                 <strong>Price:</strong> @(ticket.Price > 0 ? $"${ticket.Price}" : "Free") <br> *@
+@*                                 <strong>Quantity:</strong> @ticket.Quantity <br> *@
+@*                                 <strong>Available Seats:</strong> @ticket.AvailableTickets <br> *@
+@*                                 <strong>Open Date:</strong> @ticket.OpenDate.ToString("yyyy-MM-dd HH:mm") <br> *@
+@*                                 <strong>Close Date:</strong> @ticket.CloseDate.ToString("yyyy-MM-dd HH:mm") *@
+@*                             </p> *@
+@*                             <!-- Organizer Actions --> *@
+@*                             <div class="d-flex gap-2"> *@
+@*                                 <a asp-page="../Tickets/EditTicket" asp-route-ticketId="@ticket.Id" class="btn btn-warning w-100">Edit</a> *@
+@*                                 <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#deleteModal-@ticket.Id"> *@
+@*                                     Delete *@
+@*                                 </button> *@
+@*                             </div> *@
+
+@*                             <!-- Delete Confirmation Modal --> *@
+@*                             <div class="modal fade" id="deleteModal-@ticket.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@ticket.Id" aria-hidden="true"> *@
+@*                                 <div class="modal-dialog"> *@
+@*                                     <div class="modal-content"> *@
+@*                                         <div class="modal-header"> *@
+@*                                             <h5 class="modal-title" id="deleteModalLabel-@ticket.Id">Confirm Delete</h5> *@
+@*                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
+@*                                         </div> *@
+@*                                         <div class="modal-body"> *@
+@*                                             Are you sure you want to delete the <strong>@ticket.TicketType</strong> ticket? *@
+@*                                         </div> *@
+@*                                         <div class="modal-footer"> *@
+@*                                             <form method="post" asp-page="Details" asp-page-handler="Delete"> *@
+@*                                                 <input type="hidden" name="id" value="@ticket.Id" /> *@
+@*                                                 <button type="submit" class="btn btn-danger">Delete</button> *@
+@*                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button> *@
+@*                                             </form> *@
+@*                                         </div> *@
+@*                                     </div> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             } *@
+@*         </div> *@
+@*     } *@
+@*     else *@
+@*     { *@
+@*         <div>  *@
+@*             <p>No tickets available for this event.</p> *@
+@*         </div> *@
+@*     } *@
+@* </div> *@
+
+@* <div class="p-2"> *@
+@*     <a asp-page="../Tickets/Create" asp-route-eventId="@Model.Event.Id" class="btn btn-primary">Add Tickets for Event</a> *@
+@*     <a asp-page="./Edit" asp-route-id="@Model.Event.Id" class="btn btn-primary">Edit</a> *@
+@*     <a asp-page="./Index" class="btn btn-secondary">Back to List</a> *@
+@* </div> *@
+
+@page
 @model EventManagement_Application.Pages.Organizer.Events.DetailsModel
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Event Details";
 }
 
-<h1>Event Details</h1>
-
-<div>
-    <h4>@Model.Event.Title</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">Description</dt>
-        <dd class="col-sm-10">@Model.Event.Description</dd>
-        <dt class="col-sm-2">Date</dt>
-        <dd class="col-sm-10">@Model.Event.CreationDate.ToString("yyyy-MM-dd HH:mm")</dd>
-        <dt class="col-sm-2">Location</dt>
-        <dd class="col-sm-10">@Model.Event.Location</dd>
-        <dt class="col-sm-2">Category</dt>
-        <dd class="col-sm-10">@Model.Event.Category</dd>
-        <dt class="col-sm-2">Mode</dt>
-        <dd class="col-sm-10">@Model.Event.Mode</dd>
-        <dt class="col-sm-2">Event Date</dt>
-        <dd class="col-sm-10">@Model.Event.EventDate</dd>
-        <dt class="col-sm-2">Organizer</dt>
-        <dd class="col-sm-10">@Model.Event.OrganizerId</dd>
-    </dl>
-    <h3>Tickets</h3>
-    @if (Model.Tickets != null && Model.Tickets.Any())
-    {
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="clr-text">@Model.Event.Title</h2>
+            <span class="badge bg-btn fs-6">👁️ @Model.Event.QRScanCount Views</span>
+        </div>
+        <hr />
         <div class="row">
-            @foreach (var ticket in Model.Tickets)
+            <div class="col-md-8">
+                <dl class="row">
+                    <dt class="col-sm-3">Description:</dt>
+                    <dd class="col-sm-9">@Model.Event.Description</dd>
+                    <dt class="col-sm-3">Date:</dt>
+                    <dd class="col-sm-9">@Model.Event.CreationDate.ToString("yyyy-MM-dd HH:mm")</dd>
+                    <dt class="col-sm-3">Location:</dt>
+                    <dd class="col-sm-9">@Model.Event.Location</dd>
+                    <dt class="col-sm-3">Category:</dt>
+                    <dd class="col-sm-9">@Model.Event.Category</dd>
+                    <dt class="col-sm-3">Mode:</dt>
+                    <dd class="col-sm-9">@Model.Event.Mode</dd>
+                    <dt class="col-sm-3">Event Date:</dt>
+                    <dd class="col-sm-9">@Model.Event.EventDate</dd>
+                    <dt class="col-sm-3">Organizer:</dt>
+                    <dd class="col-sm-9">@Model.Event.OrganizerId</dd>
+                </dl>
+            </div>
+            <div class="col-md-4 text-center">
+            @*     <img src="/path-to-event-image.jpg" class="img-fluid rounded shadow" alt="Event Image"> *@
+            @if (@Model.Event.EventImage != null)
             {
-                <div class="col-md-4">
-                    <div class="card shadow-sm mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">@ticket.TicketType Ticket</h5>
-                            <p class="card-text">
-                                <strong>Price:</strong> @(ticket.Price > 0 ? $"${ticket.Price}" : "Free") <br>
-                                <strong>Quantity:</strong> @ticket.Quantity <br>
-                                <strong>Available Seats:</strong> @ticket.AvailableTickets <br>
-                                <strong>Open Date:</strong> @ticket.OpenDate.ToString("yyyy-MM-dd HH:mm") <br>
-                                <strong>Close Date:</strong> @ticket.CloseDate.ToString("yyyy-MM-dd HH:mm")
-                            </p>
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Event.EventImage)"
+                     class="img-fluid rounded shadow w-75 mb-3"
+                     alt="@Model.Event.Title">
+            }
+            else
+            {
+                <img src="/images/no-image-available.jpg" alt="Default Event Image" class="img-fluid rounded shadow w-50 mb-3" />
+            }
+            </div>
+        </div>
+    </div>
 
-                            @if (User.Identity.IsAuthenticated && Model.Event.OrganizerId == UserManager.GetUserId(User))
-                            {
-                                <!-- Organizer Actions -->
+    <div class="card shadow-lg p-4 mt-4">
+        <div class="d-flex justify-content-between align-content-center mb-4">
+        <h3 class="text-primary-color"><i class="fas fa-ticket-alt me-2"></i>Tickets</h3>
+            <!-- Add Tickets Button -->
+            <a asp-page="../Tickets/Create" asp-route-eventId="@Model.Event.Id" class="btn bg-primary-color text-white d-flex align-items-center">
+                <i class="fas fa-plus-circle me-2"></i> Add Tickets
+            </a>
+        </div>
+        <div class="row">
+            @if (Model.Tickets != null && Model.Tickets.Any())
+            {
+                @foreach (var ticket in Model.Tickets)
+                {
+                    <div class="col-md-4">
+                        <div class="card border-dark shadow-sm mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary-color">@ticket.TicketType<i class="fas fa-ticket-alt ms-2"></i></h5>
+                                <p class="card-text">
+                                    <strong>Price:</strong> @(ticket.Price > 0 ? $"${ticket.Price}" : "Free")<br>
+                                    <strong>Quantity:</strong> @ticket.Quantity<br>
+                                    <strong>Available:</strong> @ticket.AvailableTickets<br>
+                                    <strong>Open:</strong> @ticket.OpenDate.ToString("yyyy-MM-dd HH:mm")<br>
+                                    <strong>Close:</strong> @ticket.CloseDate.ToString("yyyy-MM-dd HH:mm")
+                                </p>
                                 <div class="d-flex gap-2">
-                                    <a asp-page="../Tickets/EditTicket" asp-route-ticketId="@ticket.Id" class="btn btn-warning w-100">Edit</a>
+                                    <a asp-page="../Tickets/EditTicket" asp-route-ticketId="@ticket.Id" class="btn bg-primary-color text-white w-100">✏️ Edit</a>
                                     <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#deleteModal-@ticket.Id">
-                                        Delete
+                                        🗑️ Delete
                                     </button>
                                 </div>
-
-                                <!-- Delete Confirmation Modal -->
-                                <div class="modal fade" id="deleteModal-@ticket.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@ticket.Id" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="deleteModalLabel-@ticket.Id">Confirm Delete</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure you want to delete the <strong>@ticket.TicketType</strong> ticket?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <form method="post" asp-page="Details" asp-page-handler="Delete">
-                                                    <input type="hidden" name="id" value="@ticket.Id" />
-                                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                            else
-                            {
-                                <!-- User (Attendee) Action -->
-                                <a asp-page="/BuyTicket" asp-route-ticketId="@ticket.Id" class="btn btn-primary w-100">Buy This Ticket</a>
-                            }
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">No tickets available for this event.</p>
             }
         </div>
-    }
-    else
-    {
-        <div> 
-            <p>No tickets available for this event.</p>
-        </div>
-    }
-</div>
+    </div>
 
-<div class="p-2">
-    <a asp-page="../Tickets/Create" asp-route-eventId="@Model.Event.Id" class="btn btn-primary">Add Tickets for Event</a>
-    <a asp-page="./Edit" asp-route-id="@Model.Event.Id" class="btn btn-primary">Edit</a>
-    <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
+    <div class="d-flex gap-3 mt-4 justify-content-start">
+
+        <!-- Edit Event Button -->
+        <a asp-page="./Edit" asp-route-id="@Model.Event.Id" class="btn bg-primary-color text-white d-flex align-items-center">
+            <i class="fas fa-edit me-2"></i> Edit Event
+        </a>
+
+        <!-- Back Button -->
+        <a asp-page="./Index" class="btn btn-secondary d-flex align-items-center">
+            <i class="fas fa-arrow-left me-2"></i> Back
+        </a>
+    </div>
 </div>

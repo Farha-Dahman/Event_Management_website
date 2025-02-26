@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2182px" height="726px" viewBox="0 0 2182 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hero-bg1</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F3F5FB" offset="0%"></stop>
+            <stop stop-color="#CDDAFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F3F5FB" offset="0%"></stop>
+            <stop stop-color="#D7E0F8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero-bg1" fill-rule="nonzero">
+            <polygon id="Rectangle" fill="#FFFFFF" points="0 0 2182 0 2182 726 0 726"></polygon>
+            <path d="M833.456427,660.807961 C1032.62268,611.222536 1071.0323,524.744866 1235.46194,501.970208 C1399.89157,479.19555 1499.18292,572.501724 1704.75241,555.383804 C1942.31312,535.601951 2050.06272,304.461782 2172.50744,184.331375 L2172.50744,12 L0,12 L0,588.49209 C329.509798,657.236072 667.381556,702.154791 833.456427,660.807961 Z" id="Path-Copy" fill="url(#linearGradient-1)" opacity="0.382154919"></path>
+            <path d="M804.450672,647.555356 C1075.8477,594.878381 1078.08697,534.346272 1235.46194,501.970208 C1392.83691,469.594145 1560.00677,546.967692 1688.38951,535.64041 C1904.62694,516.561659 2051.27087,295.8745 2182,186.826439 L2182,0 L0,0 L0,585.6525 C362.957814,643.160767 623.519319,682.673339 804.450672,647.555356 Z" id="Path" fill="url(#linearGradient-2)"></path>
+        </g>
+    </g>
+</svg>

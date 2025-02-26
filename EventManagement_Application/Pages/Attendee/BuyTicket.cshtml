@@ -1,0 +1,18 @@
+﻿@page
+@model EventManagement_Application.Pages.Attendee.BuyTicketModel
+@{
+    ViewData["Title"] = "Buy Ticket";
+}
+
+<h1>Purchase Ticket</h1>
+
+<form method="post">
+    <input type="hidden" name="TicketId" value="@Model.TicketId" />
+    <div>
+        <label>Price:</label>
+        <span>@Model.Ticket.Price</span>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Complete Purchase</button>
+    </div>
+</form>

@@ -4,39 +4,50 @@
     ViewData["Title"] = "Organizer Requests";
 }
 
-<h2>Organizer Requests</h2>
+<div class="container my-5">
+    <h2 class="text-center clr-text mb-4">Organizer Requests</h2>
 
-@if (Model.PendingRequests.Count == 0)
-{
-    <p class="my-5">No pending organizer requests.</p>
-}
-else
-{
-    <table class="table my-5">
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Email</th>
-                <th>Request Date</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var request in Model.PendingRequests)
-            {
-                <tr>
-                    <td>@request.User.UserName</td>
-                    <td>@request.User.Email</td>
-                    <td>@request.RequestDate.ToString("yyyy-MM-dd HH:mm")</td>
-                    <td>
-                        <form method="post">
-                            <input type="hidden" name="userId" value="@request.UserId" />
-                            <button type="submit" name="approve" value="true" class="btn btn-success">Approve</button>
-                            <button type="submit" name="reject" value="true" class="btn btn-danger">Reject</button>
-                        </form>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+    @if (Model.PendingRequests.Count == 0)
+    {
+        <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+            <img src="https://cdn-icons-png.flaticon.com/512/4076/4076658.png" alt="No Requests" class="img-fluid" style="max-width: 200px;" />
+            <p class="mt-4 text-muted fs-5">No pending organizer requests.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive shadow-lg rounded-3">
+            <table class="table table-hover align-middle text-center">
+                <thead class="text-white bg-primary-color">
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Request Date</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var request in Model.PendingRequests)
+                    {
+                        <tr>
+                            <td>@request.User.UserName</td>
+                            <td>@request.User.Email</td>
+                            <td>@request.RequestDate.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td class="text-center">
+                                <form method="post" class="d-inline-block">
+                                    <input type="hidden" name="userId" value="@request.UserId" />
+                                    <button type="submit" name="approve" value="true" class="btn btn-success btn-sm me-2">
+                                        <i class="fas fa-check-circle"></i> Approve
+                                    </button>
+                                    <button type="submit" name="reject" value="true" class="btn btn-danger btn-sm">
+                                        <i class="fa-solid fa-circle-xmark"></i> Reject
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

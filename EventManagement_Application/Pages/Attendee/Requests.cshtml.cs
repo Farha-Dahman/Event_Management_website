@@ -1,5 +1,6 @@
 using EventManagement_Application.Data;
 using EventManagement_Application.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventManagement_Application.Pages.Attendee
 {
+    [Authorize]
     public class RequestsModel : PageModel
     {
         private readonly ApplicationDbContext _context;

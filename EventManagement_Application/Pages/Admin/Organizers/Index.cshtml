@@ -1,0 +1,32 @@
+﻿@page
+@model EventManagement_Application.Pages.Admin.Organizers.IndexModel
+@{
+    ViewData["Title"] = "Organizers";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 clr-text">Organizers</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Organizer Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var organizer in Model.Organizers)
+            {
+                <tr>
+                    <td>@organizer.FirstName @organizer.LastName</td>
+                    <td>@organizer.Email</td>
+                    <td>
+                        <a asp-page="/Admin/Organizers/Events" asp-route-organizerId="@organizer.Id" class="btn bg-btn text-white">
+                            View Events
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

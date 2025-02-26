@@ -5,28 +5,38 @@
 }
 
 <form method="post">
-	<div class="card mt-4">
-		<div class="card-header">
-			<h2>@Model.UserName</h2>
-			Add/Remove Roles
-		</div>
-        <div class="card-body">
-            <input type="hidden" asp-for="UserId" />
-            @for (int i = 0; i < Model.Roles.Count; i++)
-            {
-                <div class="form-check m-1">
-                    <input type="hidden" asp-for="@Model.Roles[i].RoleName" />
-                    <input asp-for="@Model.Roles[i].IsSelected" class="form-check-input" />
-                    <label class="form-check-label" asp-for="@Model.Roles[i].IsSelected">
-                        @Model.Roles[i].RoleName
-                    </label>
+    <div class="container mt-4 pb-5 pt-3">
+        <div class="card shadow-lg rounded-3">
+            <div class="card-header clr-primary d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 clr-text">@Model.UserName</h5>
+                <span class="small clr-text">Manage Roles</span>
+            </div>
+            <div class="card-body">
+                <input type="hidden" asp-for="UserId" />
+                <div class="row">
+                    @for (int i = 0; i < Model.Roles.Count; i++)
+                    {
+                        <div class="col-md-6">
+                            <div class="form-check m-2">
+                                <input type="hidden" asp-for="@Model.Roles[i].RoleName" />
+                                <input asp-for="@Model.Roles[i].IsSelected" class="form-check-input" />
+                                <label class="form-check-label fw-bold clr-text" asp-for="@Model.Roles[i].IsSelected">
+                                    @Model.Roles[i].RoleName
+                                </label>
+                            </div>
+                        </div>
+                    }
                 </div>
-            }
-            <div asp-validation-summary="All" class="text-danger"></div>
+                <div asp-validation-summary="All" class="text-danger mt-2"></div>
+            </div>
+            <div class="card-footer d-flex justify-content-end gap-2">
+                <button type="submit" class="btn text-white bg-primary-color btn-sm">
+                    <i class="fas fa-check-circle bg-primary-color px-1"></i> Save
+                </button>
+                <a asp-page="/Admin/Roles/UserRoles" class="btn btn-outline-secondary btn-sm">
+                    <i class="fa-solid fa-circle-xmark px-1"></i> Cancel
+                </a>
+            </div>
         </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a asp-page="/Admin/Roles/UserRoles" class="btn btn-secondary">Cancel</a>
-        </div>
-	</div>
+    </div>
 </form>

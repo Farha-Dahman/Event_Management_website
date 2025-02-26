@@ -77,7 +77,22 @@ namespace EventManagement_Application.Pages
         //    TempData["SuccessMessage"] = "Your request has been sent! We will review it soon.";
         //    return RedirectToPage("/Index");
         //}
+        public List<Event> LatestEvents { get; set; }
+        public List<Event> UpcomingEvents { get; set; }
 
+        public void OnGet()
+        {
+            LatestEvents = _context.Events
+                .OrderByDescending(e => e.CreationDate) // Sort by event date (descending, newest first)
+                .Take(8) // Fetch only the latest 6 events
+                .ToList();
+
+            UpcomingEvents = _context.Events
+                         .Where(e => e.EventDate > DateTime.Now) // Only future events
+                         .OrderBy(e => e.EventDate) // Closest first
+                         .Take(8)
+                         .ToList();
+        }
 
         public async Task<IActionResult> OnPostAsync()
         {

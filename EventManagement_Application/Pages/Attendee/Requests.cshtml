@@ -4,34 +4,42 @@
     ViewData["Title"] = "My Requests";
 }
 
-<h2>My Requests</h2>
+<div class="container my-5">
+    <h2 class="text-center clr-text mb-4">My Requests</h2>
 
-@if (Model.MyRequests.Count == 0)
-{
-    <p>You have not submitted any requests.</p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Request Date</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var request in Model.MyRequests)
-            {
-                <tr>
-                    <td>@request.RequestDate.ToString("yyyy-MM-dd HH:mm")</td>
-                    <td>
-                        <span class="badge
-                            @(request.Status == "Pending" ? "bg-warning" : request.Status == "Approved" ? "bg-success" : "bg-danger")">
-                            @request.Status
-                        </span>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+    @if (Model.MyRequests.Count == 0)
+    {
+        <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+            <img src="https://cdn-icons-png.flaticon.com/512/4076/4076658.png" alt="No Requests" class="img-fluid" style="max-width: 200px;" />
+            <p class="mt-4 text-muted fs-5">You have not submitted any requests.</p>
+
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive shadow-lg rounded-3">
+            <table class="table table-hover align-middle text-center">
+                <thead class="text-white bg-primary-color">
+                    <tr>
+                        <th class="clr-text">Request Date</th>
+                        <th class="clr-text">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var request in Model.MyRequests)
+                    {
+                        <tr>
+                            <td>@request.RequestDate.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>
+                                <span class="badge rounded-pill text-white px-3 py-2 fs-8"
+                                        style="background-color: @(request.Status == "Pending" ? "#FFC107" : request.Status == "Approved" ? "#28A745" : "#DC3545")">
+                                    @request.Status
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

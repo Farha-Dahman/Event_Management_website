@@ -5,29 +5,40 @@
 	ViewData["Title"] = "Users";
 }
 
-<table class="table table-striped mt-4">
-	<thead>
-		<tr class="bg-primary text-white">
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>User Name</th>
-			<th>Email</th>
-			<th>Roles</th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var user in Model.Users){
-			<tr>
-				<td>@user.FirstName</td>
-				<td>@user.LastName</td>
-				<td>@user.UserName</td>
-				<td>@user.Email</td>
-				<td>@string.Join(" , ", user.Roles)</td>
-				<td>
-					<a class="btn btn-primary" asp-page="/Admin/Roles/ManageRoles" asp-route-userId="@user.Id">Manage Roles</a>
-				</td>
-			</tr>
-		}
-	</tbody>
-</table>
+<div class="container mt-5">
+    <h2 class="text-center mb-4 clr-text">User Management</h2>
+    <div class="table-responsive shadow-lg rounded-3">
+        <table class="table table-hover align-middle text-center">
+            <thead class="text-white bg-primary-color">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Roles</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.FirstName</td>
+                        <td>@user.LastName</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>
+                            <span class="badge bg-primary-color text-white">@string.Join(" , ", user.Roles)</span>
+                        </td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-dark d-flex align-items-center justify-content-center" 
+                               asp-page="/Admin/Roles/ManageRoles" asp-route-userId="@user.Id">
+                                <i class="fas fa-pencil-square me-1"></i> Manage
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

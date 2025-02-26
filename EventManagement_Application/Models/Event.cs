@@ -39,7 +39,7 @@ namespace EventManagement_Application.Models
         [EnumDataType(typeof(EventMode))]
         [Display(Name = "Mode of Event")]
         public EventMode Mode { get; set; }
-
+        public int QRScanCount { get; set; }
         [Required]
         public string OrganizerId { get; set; }
 

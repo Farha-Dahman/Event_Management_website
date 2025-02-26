@@ -1,0 +1,39 @@
+﻿@page
+@model EventManagement_Application.Pages.Admin.Organizers.EventsModel
+@{
+    ViewData["Title"] = "Organizer Events";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 clr-text">Events by @Model.OrganizerName</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Event Title</th>
+                <th>Event Date</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var eventItem in Model.Events)
+            {
+                <tr>
+                    <td>@eventItem.Title</td>
+                    <td>@eventItem.CreationDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@eventItem.Location</td>
+                    <td>
+                        <a asp-page="/Admin/Organizers/EventViewers" asp-route-eventId="@eventItem.Id" class="btn bg-btn text-white">
+                            View Viewers
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex gap-3 mt-4">
+        <a asp-page="./Index" class="btn btn-secondary d-flex align-items-center">
+            <i class="fas fa-arrow-left me-2"></i> Back to List
+        </a>
+    </div>
+</div>

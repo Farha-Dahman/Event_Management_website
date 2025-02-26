@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Sockets;
+using System.Reflection.Emit;
 
 namespace EventManagement_Application.Data
 {
@@ -16,8 +17,8 @@ namespace EventManagement_Application.Data
         public DbSet<Event> Events { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<OrganizerRequest> OrganizerRequests { get; set; }
-        public object TicketUsers { get; internal set; }
-
+        public DbSet<TicketUser> TicketUsers { get; set; }
+        public DbSet<EventViewer> EventViewers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -46,6 +47,19 @@ namespace EventManagement_Application.Data
                 .HasOne(tu => tu.User)
                 .WithMany(u => u.TicketUsers)
                 .HasForeignKey(tu => tu.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            builder.Entity<EventViewer>()
+                .HasOne(ev => ev.Event)
+                .WithMany()
+                .HasForeignKey(ev => ev.EventId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<EventViewer>()
+                .HasOne(ev => ev.Viewer)
+                .WithMany()
+                .HasForeignKey(ev => ev.ViewerId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

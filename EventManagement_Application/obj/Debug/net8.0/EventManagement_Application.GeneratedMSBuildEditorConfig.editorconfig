@@ -188,6 +188,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Admin/Organizers/Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JnYW5pemVyc1xFdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Admin/Organizers/EventViewers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JnYW5pemVyc1xFdmVudFZpZXdlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Admin/Organizers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JnYW5pemVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Admin/Requests/OrganizerRequests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVxdWVzdHNcT3JnYW5pemVyUmVxdWVzdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -204,12 +216,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcVXNlclJvbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/BuyTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcQnV5VGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/EventBooking.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcRXZlbnRCb29raW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/EventDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcRXZlbnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/Requests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/ScanEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcU2NhbkV2ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/ViewEvents.cshtml]

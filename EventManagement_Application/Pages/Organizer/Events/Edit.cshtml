@@ -7,50 +7,72 @@
     ViewData["Title"] = "Edit Event";
 }
 
-<h1>Edit Event</h1>
+<div class="container mt-5">
+    <h1 class="mb-4">Edit Your Event</h1>
 
-<form method="post">
-    <input type="hidden" asp-for="Event.Id" />
-    <input type="hidden" asp-for="Event.OrganizerId" />
+    <form method="post" class="needs-validation" novalidate>
+        <input type="hidden" asp-for="Event.Id" />
+        <input type="hidden" asp-for="Event.OrganizerId" />
 
-    <div class="form-group">
-        <label asp-for="Event.Title"></label>
-        <input asp-for="Event.Title" class="form-control" />
-        <span asp-validation-for="Event.Title" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.Description"></label>
-        <textarea asp-for="Event.Description" class="form-control"></textarea>
-        <span asp-validation-for="Event.Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.CreationDate"></label>
-        <input asp-for="Event.CreationDate" class="form-control" type="datetime-local" />
-        <span asp-validation-for="Event.CreationDate" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.Location"></label>
-        <input asp-for="Event.Location" class="form-control" />
-        <span asp-validation-for="Event.Location" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.Category"></label>
-        <input asp-for="Event.Category" class="form-control" />
-        <span asp-validation-for="Event.Category" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.Mode"></label>
-        <select asp-for="Event.Mode" class="form-control">
-            <option value="">Select Mode</option>
-            @foreach (var mode in Enum.GetValues(typeof(EventMode)).Cast<EventMode>())
-            {
-                <option value="@mode">@mode</option>
-            }
-        </select>
-        <span asp-validation-for="Event.Mode" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
-</form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="Event.Title" class="form-label">Event Title</label>
+                    <input asp-for="Event.Title" class="form-control" required />
+                    <span asp-validation-for="Event.Title" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="Event.Category" class="form-label">Category</label>
+                    <input asp-for="Event.Category" class="form-control" required />
+                    <span asp-validation-for="Event.Category" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
 
+        <div class="form-group mb-3">
+            <label asp-for="Event.Description" class="form-label">Description</label>
+            <textarea asp-for="Event.Description" class="form-control" rows="4" required></textarea>
+            <span asp-validation-for="Event.Description" class="text-danger"></span>
+        </div>
 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="Event.CreationDate" class="form-label">Creation Date</label>
+                    <input asp-for="Event.CreationDate" class="form-control" type="datetime-local" required />
+                    <span asp-validation-for="Event.CreationDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="Event.Location" class="form-label">Location</label>
+                    <input asp-for="Event.Location" class="form-control" required />
+                    <span asp-validation-for="Event.Location" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="Event.Mode" class="form-label">Event Mode</label>
+            <select asp-for="Event.Mode" class="form-select" required>
+                <option value="">Select Mode</option>
+                @foreach (var mode in Enum.GetValues(typeof(EventMode)).Cast<EventMode>())
+                {
+                    <option value="@mode">@mode</option>
+                }
+            </select>
+            <span asp-validation-for="Event.Mode" class="text-danger"></span>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn bg-primary-color text-white me-md-2">Save Changes</button>
+            <a asp-page="./Index" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

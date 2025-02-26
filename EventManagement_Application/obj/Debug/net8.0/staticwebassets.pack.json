@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\Spotify.svg"
     },
     {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image-event.svg",
+      "PackagePath": "staticwebassets\\images\\background-image-event.svg"
+    },
+    {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\background-image-third.jpg",
       "PackagePath": "staticwebassets\\images\\background-image-third.jpg"
     },
@@ -61,12 +65,20 @@
       "PackagePath": "staticwebassets\\images\\background-slide3.jpg"
     },
     {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\hero-bg1.svg",
+      "PackagePath": "staticwebassets\\images\\hero-bg1.svg"
+    },
+    {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
       "PackagePath": "staticwebassets\\images\\light-LogoEventify.png"
     },
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\management-office.svg",
       "PackagePath": "staticwebassets\\images\\management-office.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\no-image-available.jpg",
+      "PackagePath": "staticwebassets\\images\\no-image-available.jpg"
     },
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\organizer_event.jpeg",
@@ -79,6 +91,10 @@
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\uber.svg",
       "PackagePath": "staticwebassets\\images\\uber.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\waves-campaigns.svg",
+      "PackagePath": "staticwebassets\\images\\waves-campaigns.svg"
     },
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\js\\site.js",

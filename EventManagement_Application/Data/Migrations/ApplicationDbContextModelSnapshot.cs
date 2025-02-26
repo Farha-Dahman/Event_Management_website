@@ -145,6 +145,9 @@ namespace EventManagement_Application.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("QRScanCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -155,6 +158,33 @@ namespace EventManagement_Application.Data.Migrations
                     b.HasIndex("OrganizerId");
 
                     b.ToTable("Events");
+                });
+
+            modelBuilder.Entity("EventManagement_Application.Models.EventViewer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ScanDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ViewerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.HasIndex("ViewerId");
+
+                    b.ToTable("EventViewers");
                 });
 
             modelBuilder.Entity("EventManagement_Application.Models.OrganizerRequest", b =>
@@ -228,6 +258,9 @@ namespace EventManagement_Application.Data.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("RegistrationDate")
                         .HasColumnType("datetime2");
 
@@ -235,7 +268,7 @@ namespace EventManagement_Application.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TicketUser");
+                    b.ToTable("TicketUsers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -380,6 +413,25 @@ namespace EventManagement_Application.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Organizer");
+                });
+
+            modelBuilder.Entity("EventManagement_Application.Models.EventViewer", b =>
+                {
+                    b.HasOne("EventManagement_Application.Models.Event", "Event")
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EventManagement_Application.Models.ApplicationUser", "Viewer")
+                        .WithMany()
+                        .HasForeignKey("ViewerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+
+                    b.Navigation("Viewer");
                 });
 
             modelBuilder.Entity("EventManagement_Application.Models.OrganizerRequest", b =>
