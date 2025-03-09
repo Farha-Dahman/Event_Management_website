@@ -68,7 +68,7 @@
 </section>
 
 <!-- About Section -->
-<div class="container text-center my-3 py-5 about-section">
+<div class="container text-center my-2 pt-5 about-section">
     <h2 class="mb-4 section-title">WHY EVENTIFY?</h2>
     <p class="lead">
         Eventify is your one-stop platform to explore, organize, and manage events seamlessly.
@@ -213,95 +213,6 @@
     </section>
 </div>
 
-<!-- Contact Section -->
-<section class="contact-section my-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left Side: Image -->
-            <div class="col-md-6 col-sm-12">
-                <img src="~/images/Messages-amico.svg" alt="Contact Us" class="img-fluid w-75">
-            </div>
-
-            <!-- Right Side: Contact Form -->
-            <div class="col-md-6">
-                <h2>Contact Us</h2>
-                <form id="contactForm" method="POST" asp-page-handler="Contact">
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" asp-for="ContactForm.Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" asp-for="ContactForm.Message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn bg-primary-color text-white">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Feedback & Ratings Section -->
-<section class="feedback-section py-5">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-4">What is everyone saying?</h2>
-        <p class="text-center text-muted mb-4">See what attendees are saying about our events.</p>
-
-        <!-- Carousel -->
-        <div id="feedbackCarousel" class="carousel slide p-2" data-bs-ride="carousel">
-            <div class="carousel-inner p-2">
-                @for (int i = 0; i < Model.RecentFeedbacks.Count && i < 6; i += 3)
-                {
-                    <div class="carousel-item @(i == 0 ? "active" : "")">
-                        <div class="row justify-content-center">
-                            @for (int j = i; j < i + 3 && j < Model.RecentFeedbacks.Count; j++)
-                            {
-                                var feedback = Model.RecentFeedbacks[j];
-                                <div class="col-md-4">
-                                    <div class="card feedback-card shadow-sm p-3">
-                                        <div class="d-flex flex-column align-items-center text-center">
-                                            <img src="@(feedback.UserAvatar ?? "/images/default-avatar.jpg")"
-                                                 class="rounded-circle mb-3"
-                                                 width="80"
-                                                 height="80"
-                                                 alt="User Avatar">
-
-                                            <!-- Stars -->
-                                            <div class="stars mb-2">
-                                                @for (int k = 1; k <= 5; k++)
-                                                {
-                                                    <i class="fa-solid fa-star @(k <= feedback.Rating ? "text-warning" : "text-muted")"></i>
-                                                }
-                                            </div>
-
-                                            <p class="mt-2 text-muted">"@feedback.Comment"</p>
-                                            <p class="text-muted small">@feedback.UserName</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    </div>
-                }
-            </div>
-        </div>
-
-        <!-- Feedback Submission Button -->
-        @if (User.Identity.IsAuthenticated)
-        {
-            <div class="text-center mt-5">
-                <a href="/Attendee/Feedback" class="btn bg-primary-color text-white">Leave Your Feedback</a>
-            </div>
-        }
-        else
-        {
-            <div class="text-center mt-5">
-                <a href="/Identity/Account/Login" class="btn bg-primary-color text-white">Log in to Leave Feedback</a>
-            </div>
-        }
-    </div>
-</section>
-
 <!-- Past Events Section -->
 <div id="eventCarousel" class="latest-events-section carousel slide py-5" data-bs-ride="carousel">
     <div class="container">
@@ -375,6 +286,95 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
+<!-- Feedback & Ratings Section -->
+<section class="feedback-section py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">What is everyone saying?</h2>
+        <p class="text-center text-muted mb-4">See what attendees are saying about our events.</p>
+
+        <!-- Carousel -->
+        <div id="feedbackCarousel" class="carousel slide p-2" data-bs-ride="carousel">
+            <div class="carousel-inner p-2">
+                @for (int i = 0; i < Model.RecentFeedbacks.Count && i < 6; i += 3)
+                {
+                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                        <div class="row justify-content-center">
+                            @for (int j = i; j < i + 3 && j < Model.RecentFeedbacks.Count; j++)
+                            {
+                                var feedback = Model.RecentFeedbacks[j];
+                                <div class="col-md-4">
+                                    <div class="card feedback-card shadow-sm p-3">
+                                        <div class="d-flex flex-column align-items-center text-center">
+                                            <img src="@(feedback.UserAvatar ?? "/images/default-avatar.jpg")"
+                                                 class="rounded-circle mb-3"
+                                                 width="80"
+                                                 height="80"
+                                                 alt="User Avatar">
+
+                                            <!-- Stars -->
+                                            <div class="stars mb-2">
+                                                @for (int k = 1; k <= 5; k++)
+                                                {
+                                                    <i class="fa-solid fa-star @(k <= feedback.Rating ? "text-warning" : "text-muted")"></i>
+                                                }
+                                            </div>
+
+                                            <p class="mt-2 text-muted">"@feedback.Comment"</p>
+                                            <p class="text-muted small">@feedback.UserName</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Feedback Submission Button -->
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="text-center mt-5">
+                <a href="/Attendee/Feedback" class="btn bg-primary-color text-white">Leave Your Feedback</a>
+            </div>
+        }
+        else
+        {
+            <div class="text-center mt-5">
+                <a href="/Identity/Account/Login" class="btn bg-primary-color text-white">Log in to Leave Feedback</a>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section my-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side: Image -->
+            <div class="col-md-6 col-sm-12">
+                <img src="~/images/Messages-amico.svg" alt="Contact Us" class="img-fluid w-75">
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <form id="contactForm" method="POST" asp-page-handler="Contact">
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" asp-for="ContactForm.Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" asp-for="ContactForm.Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn bg-primary-color text-white">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 @if (SignInManager.IsSignedIn(User) && !User.IsInRole("Organizer"))
 {

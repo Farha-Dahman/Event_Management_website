@@ -643,6 +643,11 @@ ul {
     opacity: 0.3;
 }
 
+.carousel-control-next, 
+.carousel-control-prev {
+    top: 180px !important;
+}
+
 /* When the section is in view, we trigger the animation */
 .features-section.show .d-flex {
     opacity: 1;
@@ -853,7 +858,9 @@ ul {
 .event-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .event-date {
@@ -968,7 +975,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     grid-template-rows: repeat(2, auto); /* 2 rows */
-    gap: 5px;
+    row-gap: 18px;
     justify-content: center;
     align-items: start;
     max-width: 1500px;
