@@ -169,44 +169,80 @@
         <h2 class="fw-bold mb-4">Available Tickets</h2>
 
         <div class="row">
-            @foreach (var ticket in Model.Tickets)
-            {
-                <div class="col-md-4 mb-4">
-                    <div class="ticket-card p-4 bg-light shadow-lg rounded text-center">
-                        <h5 class="fw-bold">@ticket.TicketType</h5>
-                        <p class="fs-4 text-dark">$@ticket.Price</p>
-                        <p class="text-muted">Available: @ticket.AvailableTickets</p>
+            <div class="row">
+                @foreach (var ticket in Model.Tickets)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="ticket-card p-4 bg-light shadow-lg rounded text-center">
+                            <h5 class="fw-bold">@ticket.TicketType</h5>
+                            <p class="fs-4 text-dark">$@ticket.Price</p>
+                            <p class="text-muted">Available: @ticket.AvailableTickets</p>
 
-                        @if (ticket.AvailableTickets == 0)
-                        {
-                            <span class="badge bg-danger mt-5 mb-2">Sold Out</span>
-                            <button class="btn btn-secondary w-100 mt-2" disabled>Sold Out</button>
-                        }
-                        else
-                        {
-                            <form method="post" asp-page-handler="ReserveTicket">
-                                <input type="hidden" name="TicketId" value="@ticket.Id" />
+                            @if (ticket.AvailableTickets == 0)
+                            {
+                                <span class="badge bg-danger mt-5 mb-2">Sold Out</span>
+                                <button class="btn btn-secondary w-100 mt-2" disabled>Sold Out</button>
+                            }
+                            else
+                            {
+                                // Check if the ticket is available (open date has passed and close date has not passed)
+                                bool isTicketOpen = ticket.OpenDate <= DateTime.Now;
+                                bool isTicketClosed = ticket.CloseDate <= DateTime.Now;
 
-                                <!-- Quantity and Total Price Side by Side -->
-                                <div class="d-flex justify-content-between align-items-center my-3">
-                                    <div class="w-50 me-2">
-                                        <label for="ticketCount-@ticket.Id" class="fw-bold">Quantity:</label>
-                                        <input type="number" id="ticketCount-@ticket.Id" name="TicketCount" min="1" max="@ticket.AvailableTickets" value="1" class="form-control text-center" required onchange="updateTotalPrice(@ticket.Id, @ticket.Price)">
+                                <form method="post" asp-page-handler="ReserveTicket">
+                                    <input type="hidden" name="TicketId" value="@ticket.Id" />
+
+                                    <!-- Quantity and Total Price Side by Side -->
+                                    <div class="d-flex justify-content-between align-items-center my-3">
+                                        <div class="w-50 me-2">
+                                            <label for="ticketCount-@ticket.Id" class="fw-bold">Quantity:</label>
+                                            <input type="number" id="ticketCount-@ticket.Id" name="TicketCount"
+                                                   min="1" max="@ticket.AvailableTickets" value="1"
+                                                   class="form-control text-center" required
+                                                   onchange="updateTotalPrice(@ticket.Id, @ticket.Price)"
+                                            @(isTicketOpen && !isTicketClosed ? "" : "disabled")>
+                                        </div>
+                                        <div class="w-50 ms-2">
+                                            <p class="fw-bold mb-0">Total Price:</p>
+                                            <p class="fs-5 text-dark mb-0">$<span id="totalPrice-@ticket.Id">@ticket.Price</span></p>
+                                        </div>
                                     </div>
-                                    <div class="w-50 ms-2">
-                                        <p class="fw-bold mb-0">Total Price:</p>
-                                        <p class="fs-5 text-dark mb-0">$<span id="totalPrice-@ticket.Id">@ticket.Price</span></p>
-                                    </div>
-                                </div>
 
-                                <button type="submit" class="btn bg-btn text-white w-100 mt-2">Buy Ticket</button>
-                            </form>
-                        }
+                                    <button type="submit" class="btn @(isTicketOpen && !isTicketClosed ? "bg-btn text-white" : "btn-secondary") w-100 mt-2"
+                                    @(isTicketOpen && !isTicketClosed ? "" : "disabled")
+                                            title="@(!isTicketOpen ? "Ticket not available yet" : (isTicketClosed ? "The ticket sale period has ended" : ""))">
+                                        @(!isTicketOpen ? "Ticket not available yet" : (isTicketClosed ? "The ticket sale period has ended" : "Buy Ticket"))
+                                    </button>
+                                </form>
+                            }
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
         </div>
     </div>
+
+    <!-- Modal for Login Required -->
+    <div class="modal" tabindex="-1" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You need to be logged in to buy a ticket. Please log in to continue..</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @* <a href="@Url.Page("/Identity/Account/Login")" class="btn btn-primary bg-primary-color">Log in</a> *@
+                    <button type="button" class="btn btn-primary bg-primary-color" id="loginButton">Log in</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="image-above-footer">
         <img src="~/images/waves-campaigns.svg" alt="Advertisement" class="img-fluid">
     </div>
@@ -242,6 +278,24 @@
                 setTicketCount(ticketId);
             });
         });
+    });
+
+
+    function checkLoginStatus() {
+            var isAuthenticated = @User.Identity.IsAuthenticated.ToString().ToLower(); // Server-side check
+
+            if (!isAuthenticated) {
+                // If user is not authenticated, show the login popup
+                $('#loginModal').modal('show');
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission if authenticated
+        }
+
+    document.getElementById('loginButton').addEventListener('click', function() {
+        // Redirect to the login page directly
+        window.location.href = '/Identity/Account/Login';
     });
 </script>
 

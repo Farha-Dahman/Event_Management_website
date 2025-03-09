@@ -22,6 +22,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
+builder.Services.AddSingleton<EmailService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

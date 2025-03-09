@@ -48,7 +48,6 @@ namespace EventManagement_Application.Pages.Attendee
 
         //public async Task<IActionResult> OnPostReserveTicketAsync(int TicketId, int TicketCount)
         public async Task<IActionResult> OnPostReserveTicketAsync([FromForm] int TicketId, [FromForm] int TicketCount)
-
         {
             var ticket = await _context.Tickets
                 .FirstOrDefaultAsync(t => t.Id == TicketId);
@@ -57,6 +56,20 @@ namespace EventManagement_Application.Pages.Attendee
             {
                 return NotFound();
             }
+
+            // Check if the current date is within the open and close date range
+            if (DateTime.Now < ticket.OpenDate)
+            {
+                ModelState.AddModelError(string.Empty, "The ticket is not available yet.");
+                return Page();
+            }
+
+            if (DateTime.Now > ticket.CloseDate)
+            {
+                ModelState.AddModelError(string.Empty, "The ticket sales are closed.");
+                return Page();
+            }
+
 
             // Ensure the ticket count is valid (greater than 0)
             if (TicketCount <= 0)

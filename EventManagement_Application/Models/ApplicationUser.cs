@@ -22,5 +22,7 @@ namespace EventManagement_Application.Models
         public bool OrganizerRequestPending { get; set; } = false;
 
         public ICollection<TicketUser>? TicketUsers { get; set; }
+
+        public ICollection<FavoriteEvent> Favorites { get; set; }
     }
 }

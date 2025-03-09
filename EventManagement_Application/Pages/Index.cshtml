@@ -22,8 +22,24 @@
                 <div>
                     <h1 class="display-3 fw-bold">Welcome to Eventify</h1>
                     <p class="lead">Discover the hottest events near you!</p>
-                    <a href="./Identity/Account/Register" class="btn btn-outline-light bg-btn btn-lg">Get started for free</a>
-                    <a href="#" class="btn btn-outline-light btn-lg">View Latest Event</a>
+                    @* <a href="./Identity/Account/Register" class="btn btn-outline-light bg-btn btn-lg">Get started for free</a> *@
+                    <a href="./Identity/Account/Register" class="btn btn-outline-light bg-btn btn-lg"
+                       style="@(SignInManager.IsSignedIn(User) ? "display: none;" : "")">
+                        Get started for free
+                    </a>
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        @if (User.IsInRole("Organizer"))
+                        {
+                            <a href="/Organizer/Events/Create" class="btn btn-outline-light bg-btn btn-lg">Create Your Event</a>
+                        }
+                        else
+                        {
+                            <a href="/Organizer/Request" class="btn btn-outline-light bg-btn btn-lg">Request to be an Organizer</a>
+                        }
+                    }
+                    <a href="/Attendee/ViewEvents" class="btn btn-outline-light btn-lg">View Latest Event</a>
                 </div>
             </div>
         </div>
@@ -44,7 +60,7 @@
                 <div>
                     <h1 class="display-3 fw-bold">Your Next Event Awaits</h1>
                     <p class="lead">Create, share, and manage events with ease!</p>
-                    <a href="./Events" class="btn btn-outline-light btn-lg">Explore Events</a>
+                    <a href="/Attendee/ViewEvents" class="btn btn-outline-light btn-lg">Explore Events</a>
                 </div>
             </div>
         </div>
@@ -85,70 +101,57 @@
 </div>
 
 <!-- Upcoming Events Section -->
-<div id="upcomingEventCarousel" class="latest-events-section carousel slide py-5 mb-2" data-bs-ride="carousel">
+<section class="upcoming-events">
     <div class="container">
-        <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="text-center">
-                <h2 class="section-title">Upcoming Events</h2>
-                <p class="section-subtitle">Don’t miss out on these exciting upcoming events!</p>
-            </div>
+        <!-- Section Header -->
+        <div class="section-header">
+            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-subtitle">Explore our exciting lineup of events. Don’t miss out!</p>
+            <a href="./Attendee/ViewEvents" class="view-all-btn">
+                View All Events <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
-        <a href="./Attendee/ViewEvents" class="clr-text align-items-end justify-content-end d-flex text-decoration-none fw-bold py-1">
-            Show More <i class="fa-solid fa-arrow-right px-3 mb-1"></i>
-        </a>
-    </div>
 
-    <!-- Carousel Inner -->
-    <div class="carousel-inner">
-        @{
-            var chunkCount = 4; // Show 4 events per slide
-            var upcomingEvents = Model.UpcomingEvents
-                                      .Where(e => e.EventDate > DateTime.Now) // Only future events
-                                      .OrderBy(e => e.EventDate) // Earliest first
-                                      .Take(8) // Limit to 8 upcoming events
-                                      .Select((x, i) => new { x, i })
-                                      .GroupBy(x => x.i / chunkCount)
-                                      .Select(g => g.Select(v => v.x).ToList())
-                                      .ToList();
-        }
+        <!-- Events Carousel -->
+        <div class="events-carousel owl-carousel owl-theme">
+            @{
+                var upcomingEvents = Model.UpcomingEvents
+                .Where(e => e.EventDate > DateTime.Now) // Only future events
+                .OrderBy(e => e.EventDate) // Earliest first
+                .Take(8) // Limit to 8 upcoming events (2 rows x 4 columns)
+                .ToList();
+            }
 
-        @for (int i = 0; i < upcomingEvents.Count; i++)
-        {
-            <div class="carousel-item @(i == 0 ? "active" : "")">
-                <div class="container">
-                    <div class="row g-3">
-                        @foreach (var eventItem in upcomingEvents[i])
-                        {
-                            <div class="col-md-3 p-2">
-                                <div class="card border-0">
-                                    <img src="@(eventItem.EventImage != null ? "data:image/jpeg;base64," + Convert.ToBase64String(eventItem.EventImage) : "/images/default-image.jpg")"
-                                         class="card-img-top"
-                                         alt="Event Image">
-                                    <div class="card-body text-start">
-                                        <h5 class="card-title fw-bold">@eventItem.Title</h5>
-                                        <p class="text-muted small">@eventItem.Category</p>
-                                        <p><i class="fa-solid fa-calendar"></i> @eventItem.EventDate.ToString("yyyy-MM-dd HH:mm")</p>
-                                        <p><i class="fa-solid fa-map-marker-alt"></i> @eventItem.Location</p>
-                                    </div>
+            <div class="events-grid">
+                @foreach (var eventItem in upcomingEvents)
+                {
+                    <a href="/Attendee/EventDetails?eventId=@eventItem.Id" class="event-card-link">
+                        <div class="event-card mt-1">
+                            <!-- Event Image -->
+                            <div class="event-image">
+                                <img src="@(eventItem.EventImage != null ? "data:image/jpeg;base64," + Convert.ToBase64String(eventItem.EventImage) : "/images/default-image.jpg")"
+                                     alt="Event Image">
+                                <div class="event-date">
+                                    <span class="day">@eventItem.EventDate.ToString("dd")</span>
+                                    <span class="month">@eventItem.EventDate.ToString("MMM")</span>
                                 </div>
                             </div>
-                        }
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
 
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#upcomingEventCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#upcomingEventCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+                            <!-- Event Details -->
+                            <div class="event-content">
+                                <h3 class="event-title">@eventItem.Title</h3>
+                                <p class="event-category">@eventItem.Category</p>
+                                <p class="event-location"><i class="fa-solid fa-map-marker-alt"></i> @eventItem.Location</p>
+                                @* <a href="#" class="event-button text-center">Learn More</a> *@
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <!-- Features Section -->
 <section class="features-section py-4">
@@ -222,87 +225,89 @@
             <!-- Right Side: Contact Form -->
             <div class="col-md-6">
                 <h2>Contact Us</h2>
-                <form action="send_email.php" method="POST">
+                <form id="contactForm" method="POST" asp-page-handler="Contact">
                     <div class="mb-3">
                         <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" required>
+                        <input type="text" class="form-control" id="subject" name="subject" asp-for="ContactForm.Subject" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        <textarea class="form-control" id="message" name="message" asp-for="ContactForm.Message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn bg-primary-color text-white">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Reating System Section -->
-@* <section class="feedback-section py-5"> *@
-@*     <div class="container"> *@
-@*         <h2 class="text-center fw-bold mb-4">Event Feedback & Ratings</h2> *@
-@*         <p class="text-center text-muted">See what attendees are saying about our events.</p> *@
+<!-- Feedback & Ratings Section -->
+<section class="feedback-section py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">What is everyone saying?</h2>
+        <p class="text-center text-muted mb-4">See what attendees are saying about our events.</p>
 
-@*         <div class="row justify-content-center"> *@
-@*             @foreach (var feedback in Model.RecentFeedbacks) *@
-@*             { *@
-@*                 <div class="col-md-4"> *@
-@*                     <div class="card feedback-card shadow-sm p-3"> *@
-@*                         <div class="d-flex align-items-center"> *@
-@*                             <img src="@(feedback.UserAvatar ?? "/images/default-avatar.jpg")" class="rounded-circle me-3" width="50" height="50" alt="User Avatar"> *@
-@*                             <div> *@
-@*                                 <h5 class="fw-bold m-0">@feedback.UserName</h5> *@
-@*                                 <small class="text-muted">@feedback.SubmittedAt.ToString("yyyy-MM-dd")</small> *@
-@*                             </div> *@
-@*                         </div> *@
+        <!-- Carousel -->
+        <div id="feedbackCarousel" class="carousel slide p-2" data-bs-ride="carousel">
+            <div class="carousel-inner p-2">
+                @for (int i = 0; i < Model.RecentFeedbacks.Count && i < 6; i += 3)
+                {
+                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                        <div class="row justify-content-center">
+                            @for (int j = i; j < i + 3 && j < Model.RecentFeedbacks.Count; j++)
+                            {
+                                var feedback = Model.RecentFeedbacks[j];
+                                <div class="col-md-4">
+                                    <div class="card feedback-card shadow-sm p-3">
+                                        <div class="d-flex flex-column align-items-center text-center">
+                                            <img src="@(feedback.UserAvatar ?? "/images/default-avatar.jpg")"
+                                                 class="rounded-circle mb-3"
+                                                 width="80"
+                                                 height="80"
+                                                 alt="User Avatar">
 
-@*                         <div class="mt-2"> *@
-@*                             <!-- Star Rating --> *@
-@*                             <div class="stars"> *@
-@*                                 @for (int i = 1; i <= 5; i++) *@
-@*                                 { *@
-@*                                     <i class="fa-solid fa-star @(i <= feedback.Rating ? "text-warning" : "text-muted")"></i> *@
-@*                                 } *@
-@*                             </div> *@
+                                            <!-- Stars -->
+                                            <div class="stars mb-2">
+                                                @for (int k = 1; k <= 5; k++)
+                                                {
+                                                    <i class="fa-solid fa-star @(k <= feedback.Rating ? "text-warning" : "text-muted")"></i>
+                                                }
+                                            </div>
 
-@*                             <p class="mt-2 text-muted">"@feedback.Comment"</p> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             } *@
-@*         </div> *@
-@*     </div> *@
-@* </section> *@
+                                            <p class="mt-2 text-muted">"@feedback.Comment"</p>
+                                            <p class="text-muted small">@feedback.UserName</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
 
+        <!-- Feedback Submission Button -->
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="text-center mt-5">
+                <a href="/Attendee/Feedback" class="btn bg-primary-color text-white">Leave Your Feedback</a>
+            </div>
+        }
+        else
+        {
+            <div class="text-center mt-5">
+                <a href="/Identity/Account/Login" class="btn bg-primary-color text-white">Log in to Leave Feedback</a>
+            </div>
+        }
+    </div>
+</section>
 
-
-@* <script> *@
-@*     document.getElementById("requestAccessButton").addEventListener("click", function () { *@
-@*         var confirmModal = new bootstrap.Modal(document.getElementById("confirmRequestModal")); *@
-@*         confirmModal.show(); *@
-@*     }); *@
-@*     function isInView(element) { *@
-@*         const rect = element.getBoundingClientRect(); *@
-@*         return rect.top >= 0 && rect.bottom <= window.innerHeight; *@
-@*     } *@
-
-@*     // Trigger the transition when the section is in view *@
-@*     document.addEventListener('scroll', () => { *@
-@*         const section = document.querySelector('.features-section'); *@
-@*         if (isInView(section)) { *@
-@*             section.classList.add('show'); *@
-@*         } *@
-@*     }); *@
-@* </script> *@
-
-
-<!-- Latest Events Section -->
+<!-- Past Events Section -->
 <div id="eventCarousel" class="latest-events-section carousel slide py-5" data-bs-ride="carousel">
     <div class="container">
         <div class="d-flex justify-content-center align-items-center mb-4">
             <div class="text-center">
-                <h2 class="section-title">Latest Events</h2>
+                <h2 class="section-title">Our Past Events</h2>
                 <p class="section-subtitle">Stay updated with the newest events happening around you!</p>
             </div>
         </div>
@@ -315,38 +320,48 @@
     <div class="carousel-inner">
         @{
             var chunkSize = 4; // Show 4 events per slide
-            var eventChunks = Model.LatestEvents.OrderByDescending(e => e.EventDate)
-            .Take(8) // Fetch 8 latest events
+
+            var pastTwoMonthsEvents = Model.LatestEvents
+            .Where(e => e.EventDate < DateTime.Now) // Ensure only past events are shown
+            .OrderByDescending(e => e.EventDate) // Sort by most recent past event
+            .Take(8) // Fetch last 8 past events
             .Select((x, i) => new { x, i })
             .GroupBy(x => x.i / chunkSize)
             .Select(g => g.Select(v => v.x).ToList())
             .ToList();
         }
 
-        @for (int i = 0; i < eventChunks.Count; i++)
+        @if (pastTwoMonthsEvents.Any())
         {
-            <div class="carousel-item @(i == 0 ? "active" : "")">
-                <div class="container">
-                    <div class="row g-3">
-                        @foreach (var eventItem in eventChunks[i])
-                        {
-                            <div class="col-md-3 p-2">
-                                <div class="card border-0">
-                                    <img src="@(eventItem.EventImage != null ? "data:image/jpeg;base64," + Convert.ToBase64String(eventItem.EventImage) : "/images/default-image.jpg")"
-                                         class="card-img-top"
-                                         alt="Event Image">
-                                    <div class="card-body text-start">
-                                        <h5 class="card-title fw-bold">@eventItem.Title</h5>
-                                        <p class="text-muted small">@eventItem.Category</p>
-                                        <p><i class="fa-solid fa-calendar"></i> @eventItem.EventDate.ToString("yyyy-MM-dd HH:mm")</p>
-                                        <p><i class="fa-solid fa-map-marker-alt"></i> @eventItem.Location</p>
+            @for (int i = 0; i < pastTwoMonthsEvents.Count; i++)
+            {
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <div class="container">
+                        <div class="row g-3">
+                            @foreach (var eventItem in pastTwoMonthsEvents[i])
+                            {
+                                <div class="col-md-3 p-2">
+                                    <div class="card border-0" onclick="goToEventDetails('@eventItem.Id')" style="cursor: pointer;">
+                                        <img src="@(eventItem.EventImage != null ? "data:image/jpeg;base64," + Convert.ToBase64String(eventItem.EventImage) : "/images/default-image.jpg")"
+                                             class="card-img-top"
+                                             alt="Event Image">
+                                        <div class="card-body text-start">
+                                            <h5 class="card-title fw-bold">@eventItem.Title</h5>
+                                            <p class="text-muted small">@eventItem.Category</p>
+                                            <p><i class="fa-solid event-date-icon me-1 fa-calendar"></i> @eventItem.EventDate.ToString("yyyy-MM-dd HH:mm")</p>
+                                            <p><i class="fa-solid secondary-color me-1 fa-map-marker-alt"></i> @eventItem.Location</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+        }
+        else
+        {
+            <p class="text-center text-muted">No past events found in the last two months.</p>
         }
     </div>
 
@@ -361,8 +376,7 @@
     </button>
 </div>
 
-
-@if (SignInManager.IsSignedIn(User))
+@if (SignInManager.IsSignedIn(User) && !User.IsInRole("Organizer"))
 {
     <section class="become-organizer-section text-center pb-5">
         <div class="container">
@@ -399,3 +413,84 @@
         </div>
     </div>
 }
+
+
+<script>     
+    document.getElementById("requestAccessButton").addEventListener("click", function () {
+        var confirmModal = new bootstrap.Modal(document.getElementById("confirmRequestModal"));
+         confirmModal.show();
+     });
+     function isInView(element) {
+         const rect = element.getBoundingClientRect();
+         return rect.top >= 0 && rect.bottom <= window.innerHeight;
+     }
+
+     // Trigger the transition when the section is in view
+     document.addEventListener('scroll', () => {
+         const section = document.querySelector('.features-section');
+        if (isInView(section)) {
+            section.classList.add('show');
+         }
+     });
+    $(document).ready(function(){
+        $(".events-carousel").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            const formData = new FormData(form);
+
+            // Send the form data via AJAX (fetch)
+            fetch(form.action, {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())  // Assuming server returns JSON
+            .then(data => {
+                if (data.success) {
+                    // Reset the form after successful submission
+                    form.reset();
+
+                    // Optionally show a success message or alert
+                    alert("Your message has been sent!");
+                } else {
+                    alert("There was an issue sending your message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            });
+        });
+    });
+</script>
+
+<script>
+    function goToEventDetails(eventId) {
+    window.location.href = `/Attendee/EventDetails?eventId=${eventId}`;
+    }
+</script>

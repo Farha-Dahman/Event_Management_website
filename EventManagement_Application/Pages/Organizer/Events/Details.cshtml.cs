@@ -20,23 +20,6 @@ namespace EventManagement_Application.Pages.Organizer.Events
         public Event Event { get; set; }
         public ICollection<Ticket> Tickets { get; set; }
 
-        //public async Task<IActionResult> OnGet(int? id)
-        //{
-        //    // Fetch the event along with its associated tickets
-        //    Event = await _context.Events
-        //        .Include(e => e.Tickets)
-        //        .FirstOrDefaultAsync(e => e.Id == id);
-
-        //    if (Event == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    // Tickets will be automatically populated with the related tickets
-        //    Tickets = Event.Tickets;  // You can explicitly assign tickets if needed
-
-        //    return Page();
-        //}
         public IActionResult OnGet(int? id)
         {
             if (id == null)

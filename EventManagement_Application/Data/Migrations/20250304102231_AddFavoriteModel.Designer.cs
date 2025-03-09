@@ -4,6 +4,7 @@ using EventManagement_Application.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventManagement_Application.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250304102231_AddFavoriteModel")]
+    partial class AddFavoriteModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,38 +109,6 @@ namespace EventManagement_Application.Data.Migrations
                     b.ToTable("Users", "security");
                 });
 
-            modelBuilder.Entity("EventManagement_Application.Models.ContactForm", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("SubmittedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ContactForms");
-                });
-
             modelBuilder.Entity("EventManagement_Application.Models.Event", b =>
                 {
                     b.Property<int>("Id")
@@ -227,13 +198,7 @@ namespace EventManagement_Application.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EventId1")
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
@@ -242,11 +207,7 @@ namespace EventManagement_Application.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
-
                     b.HasIndex("EventId");
-
-                    b.HasIndex("EventId1");
 
                     b.HasIndex("UserId");
 
@@ -533,19 +494,11 @@ namespace EventManagement_Application.Data.Migrations
 
             modelBuilder.Entity("EventManagement_Application.Models.FavoriteEvent", b =>
                 {
-                    b.HasOne("EventManagement_Application.Models.ApplicationUser", null)
-                        .WithMany("Favorites")
-                        .HasForeignKey("ApplicationUserId");
-
                     b.HasOne("EventManagement_Application.Models.Event", "Event")
                         .WithMany()
                         .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("EventManagement_Application.Models.Event", null)
-                        .WithMany("FavoritedBy")
-                        .HasForeignKey("EventId1");
 
                     b.HasOne("EventManagement_Application.Models.ApplicationUser", "User")
                         .WithMany()
@@ -652,15 +605,11 @@ namespace EventManagement_Application.Data.Migrations
 
             modelBuilder.Entity("EventManagement_Application.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("Favorites");
-
                     b.Navigation("TicketUsers");
                 });
 
             modelBuilder.Entity("EventManagement_Application.Models.Event", b =>
                 {
-                    b.Navigation("FavoritedBy");
-
                     b.Navigation("Tickets");
                 });
 

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Event Analytics";
 }
 
-<h2>@Model.Event.Title - Analytics</h2>
+<h2 class="clr-text text-center my-3">@Model.Event.Title - Analytics</h2>
 
 <table class="table">
     <thead>
@@ -36,4 +36,4 @@
 <h3>Total Revenue: @Model.TotalRevenue.ToString("C")</h3>
 <h3>Attendance Rate: @Model.AttendanceRate.ToString("0.00")%</h3>
 
-<a asp-page="./Index" class="btn btn-primary">Back to Events</a>
+<a asp-page="./Index" class="btn bg-primary-color text-white my-2"><i class="fas fa-arrow-left me-2"></i> Back to Events</a>

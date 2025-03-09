@@ -47,5 +47,7 @@ namespace EventManagement_Application.Models
         public ApplicationUser Organizer { get; set; }
 
         public ICollection<Ticket>? Tickets { get; set; } = new List<Ticket>();
+
+        public ICollection<FavoriteEvent> FavoritedBy { get; set; }
     }
 }

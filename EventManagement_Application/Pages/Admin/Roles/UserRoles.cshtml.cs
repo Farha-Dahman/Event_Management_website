@@ -16,25 +16,8 @@ namespace EventManagement_Application.Pages.Admin.Roles
             _userManager = userManager;
             _roleManager = roleManager;
         }
-        //public void OnGet()
-        //{
-        //}
+
         public List<UserInfo> Users { get; set; } = new();
-
-        //public async Task<IActionResult> OnGetAsync()
-        //{
-        //    Users = await _userManager.Users.Select(user => new UserInfo {
-        //            Id = user.Id,
-        //            FirstName = user.FirstName,
-        //            LastName = user.LastName,
-        //            UserName = user.UserName,
-        //            Email = user.Email,
-        //            Roles = _userManager.GetRolesAsync(user).Result
-        //        })
-        //        .ToListAsync();
-
-        //    return Page();
-        //}
 
         public async Task<IActionResult> OnGetAsync()
         {

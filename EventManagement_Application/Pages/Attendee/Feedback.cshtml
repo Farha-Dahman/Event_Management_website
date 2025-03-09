@@ -1,0 +1,49 @@
+﻿@page
+@model EventManagement_Application.Pages.Attendee.FeedbackModel
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@{
+    var currentUser = UserManager.GetUserAsync(User).Result;
+}
+
+<section class="feedback-section py-5">
+    <div class="container">
+        <h2 class="text-center clr-text fw-bold mb-4">Send Your Feedback</h2>
+        <p class="text-center text-muted mb-4">We value your feedback! Please share your thoughts on our website.</p>
+
+        <form method="post" class="feedback-form shadow-lg p-4 rounded">
+            <!-- User Name -->
+            <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" name="UserName" value="@currentUser.UserName" required readonly />
+            </div>
+
+            <!-- Rating -->
+            <div class="mb-3">
+                <label class="form-label">Rating</label>
+                <select class="form-control" name="Rating" required>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+
+            <!-- Comment -->
+            <div class="mb-3">
+                <label class="form-label">Your Feedback</label>
+                <textarea class="form-control" name="Comment" rows="4" placeholder="Share your thoughts about the events..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn bg-primary-color fw-bold text-white btn-lg">Submit Feedback</button>
+            </div>
+            <!-- Back to Home Button -->
+            <div class="text-start mt-5">
+                <a asp-page="/Index" class="btn btn-gray"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </form>
+    </div>
+</section>

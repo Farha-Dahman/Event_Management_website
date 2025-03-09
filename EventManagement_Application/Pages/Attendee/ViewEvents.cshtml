@@ -6,147 +6,6 @@
 
 @Html.AntiForgeryToken()
 
-@* <div class="container mt-4"> *@
-@*     <h2 class="text-start py-3 mb-4">Upcoming Events</h2> *@
-@*     <div class="row"> *@
-@*         @foreach (var eventItem in Model.Events) *@
-@*         { *@
-@*             <div class="col-md-6 col-lg-4 mb-4"> *@
-@*                 <a href="/Attendee/EventDetails?eventId=@eventItem.Id" class="text-decoration-none"> *@
-@*                 <div class="card shadow-sm event-card text-decoration-none position-relative"> *@
-@*                     <div class="image-container position-relative"> *@
-@*                         @if (eventItem.EventImage != null) *@
-@*                         { *@
-@*                             <img src="data:image/png;base64,@Convert.ToBase64String(eventItem.EventImage)" alt="Event Image" class="card-img-top" /> *@
-@*                         } *@
-@*                         else *@
-@*                         { *@
-@*                             <img src="/images/no-image-available.jpg" alt="Default Event Image" class="card-img-top" /> *@
-@*                         } *@
-@*                             <div class="position-absolute bottom-0 end-0 gap-2 p-2 d-none btns"> *@
-@*                                 <button class="favorite-btn rounded-circle me-2"> *@
-@*                                     <i class="fas fa-heart event-icon p-3 rounded-circle"></i> *@
-@*                                 </button> *@
-@*                                 <button class="scanner-btn rounded-circle me-2"> *@
-@*                                     <i class="fa-solid fa-qrcode event-icon p-3 rounded-circle"></i> *@
-@*                                 </button> *@
-@*                                 <button class="share-btn rounded-circle"> *@
-@*                                     <i class="fas fa-share event-icon p-3 rounded-circle"></i> *@
-@*                                 </button> *@
-@*                             </div> *@
-@*                     </div> *@
-@*                     <div class="card-body"> *@
-@*                         <h5 class="card-title">@eventItem.Title</h5> *@
-@*                         <p class="card-text text-muted small">@eventItem.EventDate.ToString("MMMM dd, yyyy") - @eventItem.Location</p> *@
-@*                         <p class="card-text">@eventItem.Description</p> *@
-@*                     </div> *@
-@*                 </div> *@
-@*                 </a> *@
-@*             </div> *@
-@*         } *@
-@*     </div> *@
-@* </div> *@
-
-@* <div class="container mt-4"> *@
-@*     <h2 class="text-start py-3 mb-4">Upcoming Events</h2> *@
-@*     <div class="row"> *@
-@*         @foreach (var eventItem in Model.Events) *@
-@*         { *@
-@*             <div class="col-md-6 col-lg-4 mb-4"> *@
-@*                 <a href="/Attendee/EventDetails?eventId=@eventItem.Id" class="text-decoration-none"> *@
-@*                     <div class="card shadow-sm event-card text-decoration-none position-relative"> *@
-@*                         <div class="image-container position-relative"> *@
-@*                             @if (eventItem.EventImage != null) *@
-@*                             { *@
-@*                                 <img src="data:image/png;base64,@Convert.ToBase64String(eventItem.EventImage)" alt="Event Image" class="card-img-top" /> *@
-@*                             } *@
-@*                             else *@
-@*                             { *@
-@*                                 <img src="/images/no-image-available.jpg" alt="Default Event Image" class="card-img-top" /> *@
-@*                             } *@
-@*                             <div class="position-absolute bottom-0 end-0 gap-2 p-2 d-none btns"> *@
-@*                                 <!-- Add onclick="event.stopPropagation();" to each button --> *@
-@*                                 <button class="favorite-btn rounded-circle me-2" onclick="event.stopPropagation();"> *@
-@*                                     <i class="fas fa-heart event-icon p-3 rounded-circle"></i> *@
-@*                                 </button> *@
-@*                                 <button class="scanner-btn rounded-circle me-2" onclick="event.stopPropagation();"> *@
-@*                                     <i class="fa-solid fa-qrcode event-icon p-3 rounded-circle"></i> *@
-@*                                 </button> *@
-@*                                 <button class="share-btn rounded-circle" onclick="event.stopPropagation();"> *@
-@*                                     <i class="fas fa-share event-icon p-3 rounded-circle"></i> *@
-@*                                 </button> *@
-@*                             </div> *@
-@*                         </div> *@
-@*                         <div class="card-body"> *@
-@*                             <h5 class="card-title">@eventItem.Title</h5> *@
-@*                             <p class="card-text text-muted small">@eventItem.EventDate.ToString("MMMM dd, yyyy") - @eventItem.Location</p> *@
-@*                             <p class="card-text">@eventItem.Description</p> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </a> *@
-@*             </div> *@
-@*         } *@
-@*     </div> *@
-@* </div> *@
-
-
-@* ///////correct//////// *@
-
-@* <div class="container mt-4"> *@
-@*     <h2 class="text-start py-3 mb-4">Upcoming Events</h2> *@
-@*     <div class="row"> *@
-@*         @foreach (var eventItem in Model.Events) *@
-@*         { *@
-@*             <div class="col-md-6 col-lg-4 mb-4"> *@
-@*                 <div class="card shadow-sm event-card text-decoration-none position-relative" *@
-@*                      onclick="goToEventDetails('@eventItem.Id')"> *@
-@*                     <div class="image-container position-relative"> *@
-@*                         @if (eventItem.EventImage != null) *@
-@*                         { *@
-@*                             <img src="data:image/png;base64,@Convert.ToBase64String(eventItem.EventImage)" alt="Event Image" class="card-img-top" /> *@
-@*                         } *@
-@*                         else *@
-@*                         { *@
-@*                             <img src="/images/no-image-available.jpg" alt="Default Event Image" class="card-img-top" /> *@
-@*                         } *@
-@*                         <div class="position-absolute bottom-0 end-0 gap-2 p-2 btns"> *@
-@*                             <button class="favorite-btn rounded-circle me-2" onclick="redirectToMain(event)"> *@
-@*                                 <i class="fas fa-heart event-icon p-3 rounded-circle"></i> *@
-@*                             </button> *@
-@*                             <button class="scanner-btn rounded-circle me-2" onclick="redirectToMain(event)"> *@
-@*                                 <i class="fa-solid fa-qrcode event-icon p-3 rounded-circle"></i> *@
-@*                             </button> *@
-@*                             <button class="share-btn rounded-circle" onclick="redirectToMain(event)"> *@
-@*                                 <i class="fas fa-share event-icon p-3 rounded-circle"></i> *@
-@*                             </button> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                     <div class="card-body"> *@
-@*                         <h5 class="card-title">@eventItem.Title</h5> *@
-@*                         <p class="card-text text-muted small">@eventItem.EventDate.ToString("MMMM dd, yyyy") - @eventItem.Location</p> *@
-@*                         <p class="card-text">@eventItem.Description</p> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         } *@
-@*     </div> *@
-@* </div> *@
-
-
-@* <script> *@
-@*     function goToEventDetails(eventId) { *@
-@*         window.location.href = '/Attendee/EventDetails?eventId=' + eventId; *@
-@*     } *@
-
-@*     function redirectToMain(event) { *@
-@*         event.stopPropagation(); // Prevent event from reaching the card click *@
-@*         window.location.href = '/'; *@
-@*     } *@
-@* </script> *@
-
-@* ///////correct//////// *@
-
-
 <div class="container mt-4">
     <h2 class="text-start py-3 mb-4">Upcoming Events</h2>
     <div class="row">
@@ -165,9 +24,11 @@
                             <img src="/images/no-image-available.jpg" alt="Default Event Image" class="card-img-top" />
                         }
                         <div class="position-absolute bottom-0 end-0 gap-2 p-2 btns">
-                            <button class="favorite-btn rounded-circle me-2" onclick="redirectToMain(event)">
-                                <i class="fas fa-heart event-icon p-3 rounded-circle"></i>
+                            <button class="favorite-btn rounded-circle me-2"
+                                    onclick="toggleFavorite(event, '@eventItem.Id')">
+                                <i id="favorite-icon-@eventItem.Id" class="fa-@(@Model.FavoritedEventIds.Contains(eventItem.Id) ? "solid" : "regular") fa-heart event-icon p-3 rounded-circle"></i>
                             </button>
+
 
                             <!-- Form for QR Code Button -->
                             @* <form method="post" asp-page-handler="generateQRCode(event, '@eventItem.Id')"> *@
@@ -195,6 +56,25 @@
     </div>
 </div>
 
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                You need to log in to add events to your favorites. Please log in and try again.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/Identity/Account/Login" class="btn btn-primary bg-primary-color">Log in</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- QR Code Modal -->
 <div class="modal fade justify-content-center" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -218,7 +98,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-
 <script>
     function goToEventDetails(eventId) {
         window.location.href = '/Attendee/EventDetails?eventId=' + eventId;
@@ -229,29 +108,7 @@
         window.location.href = '/';
     }
 
-    @* function generateQRCode(event, eventId) { *@
-    @*     event.stopPropagation(); // Prevent card click *@
-
-    @*     // Clear previous QR code *@
-    @*     document.getElementById("qrcode").innerHTML = ""; *@
-
-    @*     // Generate new QR code *@
-    @*     let qrLink = window.location.origin + "/Attendee/EventDetails?eventId=" + eventId; *@
-    @*     new QRCode(document.getElementById("qrcode"), { *@
-    @*         text: qrLink, *@
-    @*         width: 200, *@
-    @*         height: 200, *@
-    @*     }); *@
-
-    @*     // Open modal *@
-    @*     var qrCodeModal = new bootstrap.Modal(document.getElementById('qrCodeModal')); *@
-    @*     qrCodeModal.show(); *@
-
-    @*     // Send request to backend to track QR scan *@
-    @*     trackQRCodeScan(eventId); *@
-    @* } *@
-
-        function generateQRCode(event, eventId) {
+    function generateQRCode(event, eventId) {
         event.stopPropagation(); // Prevent card click
 
         // Clear previous QR code
@@ -300,5 +157,49 @@
             console.error("Error tracking QR scan:", error);
         });
     }
+
+
+
+
+
+    function toggleFavorite(event, eventId) {
+        event.stopPropagation(); // Prevent card click behavior
+
+        fetch('/Attendee/ViewEvents?handler=ToggleFavorite', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+            },
+            body: JSON.stringify({ eventId: eventId }) // Make sure it matches the backend parameter
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                let icon = document.getElementById(`favorite-icon-${eventId}`);
+                if (data.isFavorited) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                }
+            } else {
+                console.error("Failed to update favorite status:", data.message);
+                if (data.message && data.message === "You need to log in to add events to favorites.") {
+                    showLoginPopup(); // Show the popup
+                }
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    }
+
+
+    function showLoginPopup() {
+        // Show a modal or alert here
+        const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+        modal.show();
+    }
+
 </script>
 

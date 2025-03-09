@@ -6,122 +6,156 @@
     ViewData["Title"] = "Create Event";
 }
 
-@* <h1>Create Event</h1> *@
+<!-- Custom CSS -->
+<style>
+    body {
+        background: linear-gradient(to bottom, #1e0a3c, #fff);
+        color: #fff;
+        height: 100vh;
+        margin: 0;
+        background-repeat: no-repeat;
+    }
 
-@* <form method="post" enctype="multipart/form-data"> *@
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.Title"></label> *@
-@*         <input asp-for="Event.Title" class="form-control" /> *@
-@*         <span asp-validation-for="Event.Title" class="text-danger"></span> *@
-@*     </div> *@
+    .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.Description"></label> *@
-@*         <textarea asp-for="Event.Description" class="form-control"></textarea> *@
-@*         <span asp-validation-for="Event.Description" class="text-danger"></span> *@
-@*     </div> *@
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.StartDate"></label> *@
-@*         <input asp-for="Event.StartDate" class="form-control" type="datetime-local" /> *@
-@*         <span asp-validation-for="Event.StartDate" class="text-danger"></span> *@
-@*     </div> *@
+    .form-control:focus {
+        border-color: #6a11cb;
+        box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.EndDate"></label> *@
-@*         <input asp-for="Event.EndDate" class="form-control" type="datetime-local" /> *@
-@*         <span asp-validation-for="Event.EndDate" class="text-danger"></span> *@
-@*     </div> *@
+    .btn-primary {
+        background: #491B90;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.Location"></label> *@
-@*         <input asp-for="Event.Location" class="form-control" /> *@
-@*         <span asp-validation-for="Event.Location" class="text-danger"></span> *@
-@*     </div> *@
+    .btn-primary:hover {
+        background: #6a11cb;
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.EventImage"></label> *@
-@*         <input asp-for="Event.EventImage" type="file" class="form-control" /> *@
-@*         <span asp-validation-for="Event.EventImage" class="text-danger"></span> *@
-@*     </div> *@
+    .btn-secondary {
+        background: #6c757d;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.Category"></label> *@
-@*         <input asp-for="Event.Category" class="form-control" /> *@
-@*         <span asp-validation-for="Event.Category" class="text-danger"></span> *@
-@*     </div> *@
+    .btn-secondary:hover {
+        background: #5a6268;
+    }
 
-@*     <div class="form-group"> *@
-@*         <label asp-for="Event.Mode"></label> *@
-@*         <select asp-for="Event.Mode" class="form-control"> *@
-@*             <option value="">Select Mode</option> *@
-@*             @foreach (var mode in Enum.GetValues(typeof(EventMode)).Cast<EventMode>()) *@
-@*             { *@
-@*                 <option value="@mode">@mode</option> *@
-@*             } *@
-@*         </select> *@
-@*         <span asp-validation-for="Event.Mode" class="text-danger"></span> *@
-@*     </div> *@
+    .form-group label {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
 
-@*     <input type="hidden" asp-for="Event.OrganizerId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" /> *@
-@*     <button type="submit" class="btn btn-primary">Create</button> *@
-@*     <a asp-page="./Index" class="btn btn-secondary">Cancel</a> *@
-@* </form> *@
-<h1>Create Event</h1>
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
 
-<form method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Event.Title"></label>
-        <input asp-for="Event.Title" class="form-control" />
-        <span asp-validation-for="Event.Title" class="text-danger"></span>
+    .form-group i {
+        margin-right: 10px;
+        color: #6a11cb;
+    }
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+</style>
+
+<div class="container mt-5 mb-5">
+    <h1>Create Event</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4">
+                <form method="post" enctype="multipart/form-data">
+                    <!-- Title -->
+                    <div class="form-group">
+                        <label asp-for="Event.Title"><i class="fas fa-heading"></i> Title</label>
+                        <input asp-for="Event.Title" class="form-control" placeholder="Enter event title" />
+                        <span asp-validation-for="Event.Title" class="text-danger"></span>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label asp-for="Event.Description"><i class="fas fa-align-left"></i> Description</label>
+                        <textarea asp-for="Event.Description" class="form-control" rows="4" placeholder="Enter event description"></textarea>
+                        <span asp-validation-for="Event.Description" class="text-danger"></span>
+                    </div>
+
+                    <!-- Event Date -->
+                    <div class="form-group">
+                        <label asp-for="Event.EventDate"><i class="fas fa-calendar-alt"></i> Event Date</label>
+                        <input asp-for="Event.EventDate" class="form-control" type="datetime-local"
+                               value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
+                               min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                        <span asp-validation-for="Event.EventDate" class="text-danger"></span>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="form-group">
+                        <label asp-for="Event.Location"><i class="fas fa-map-marker-alt"></i> Location</label>
+                        <input asp-for="Event.Location" class="form-control" placeholder="Enter event location" />
+                        <span asp-validation-for="Event.Location" class="text-danger"></span>
+                    </div>
+
+                    <!-- Event Image -->
+                    <div class="form-group">
+                        <label asp-for="Event.EventImage"><i class="fas fa-image"></i> Event Image</label>
+                        <input asp-for="Event.EventImage" type="file" class="form-control" />
+                        <span asp-validation-for="Event.EventImage" class="text-danger"></span>
+                    </div>
+
+                    <!-- Category -->
+                    <div class="form-group">
+                        <label asp-for="Event.Category"><i class="fas fa-tags"></i> Category</label>
+                        <input asp-for="Event.Category" class="form-control" placeholder="Enter event category" />
+                        <span asp-validation-for="Event.Category" class="text-danger"></span>
+                    </div>
+
+                    <!-- Mode -->
+                    <div class="form-group">
+                        <label asp-for="Event.Mode"><i class="fas fa-globe"></i> Mode</label>
+                        <select asp-for="Event.Mode" class="form-control">
+                            <option value="">Select Mode</option>
+                            @foreach (var mode in Enum.GetValues(typeof(EventMode)).Cast<EventMode>())
+                            {
+                                <option value="@mode">@mode</option>
+                            }
+                        </select>
+                        <span asp-validation-for="Event.Mode" class="text-danger"></span>
+                    </div>
+
+                    <!-- Hidden OrganizerId -->
+                    <input type="hidden" asp-for="Event.OrganizerId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" />
+
+                    <!-- Buttons -->
+                    <div class="form-group text-center mt-4">
+                        <button type="submit" class="btn bg-primary-color text-white"><i class="fas fa-plus-circle text-white"></i> Create Event</button>
+                        <a asp-page="./Index" class="btn btn-secondary"><i class="fas fa-times-circle"></i> Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="form-group">
-        <label asp-for="Event.Description"></label>
-        <textarea asp-for="Event.Description" class="form-control"></textarea>
-        <span asp-validation-for="Event.Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.EventDate"></label>
-        <input asp-for="Event.EventDate" class="form-control" type="datetime-local"
-               value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
-               min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
-        <span asp-validation-for="Event.EventDate" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Event.Location"></label>
-        <input asp-for="Event.Location" class="form-control" />
-        <span asp-validation-for="Event.Location" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Event.EventImage"></label>
-        <input asp-for="Event.EventImage" type="file" class="form-control" />
-        <span asp-validation-for="Event.EventImage" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Event.Category"></label>
-        <input asp-for="Event.Category" class="form-control" />
-        <span asp-validation-for="Event.Category" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Event.Mode"></label>
-        <select asp-for="Event.Mode" class="form-control">
-            <option value="">Select Mode</option>
-            @foreach (var mode in Enum.GetValues(typeof(EventMode)).Cast<EventMode>())
-            {
-                <option value="@mode">@mode</option>
-            }
-        </select>
-        <span asp-validation-for="Event.Mode" class="text-danger"></span>
-    </div>
-
-    <input type="hidden" asp-for="Event.OrganizerId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" />
-
-    <div class="d-block my-5">
-        <button type="submit" class="btn btn-primary">Create</button>
-        <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
-    </div>
-</form>
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

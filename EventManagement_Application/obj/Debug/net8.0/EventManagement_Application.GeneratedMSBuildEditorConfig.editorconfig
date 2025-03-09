@@ -220,12 +220,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcQnV5VGlja2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/EventBooking.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcRXZlbnRCb29raW5nLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/EventDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcRXZlbnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0ZW5kZWVcRmVlZGJhY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/farha/source/repos/EventManagement_Application/EventManagement_Application/Pages/Attendee/Requests.cshtml]

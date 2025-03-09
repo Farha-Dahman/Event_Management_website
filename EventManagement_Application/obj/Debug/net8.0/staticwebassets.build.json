@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HC4rvzrFtDjnZT/3hXaKUcY1AeiZDFkXjY1NUHO54C0=",
+  "Hash": "YBBwKPvBctEyyjKY+PWnnuFn1ZMJxq+DgiraU68GOtE=",
   "Source": "EventManagement_Application",
   "BasePath": "_content/EventManagement_Application",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3dogfc6fa2",
-      "Integrity": "Vx6eh88CQIMveMZsBX+pMbGPCGtqf1D6fujD0q2PCD8=",
+      "Fingerprint": "gztm73ru4r",
+      "Integrity": "tDtqo40hG6iAO3GiRyLIcaxUdqTPtASNfv9opRtV/pw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3022,51 +3022,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.3dogfc6fa2.css",
-      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13097"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Vx6eh88CQIMveMZsBX+pMbGPCGtqf1D6fujD0q2PCD8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 10:02:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3dogfc6fa2"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Vx6eh88CQIMveMZsBX+pMbGPCGtqf1D6fujD0q2PCD8="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3077,7 +3032,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13097"
+          "Value": "18916"
         },
         {
           "Name": "Content-Type",
@@ -3085,11 +3040,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Vx6eh88CQIMveMZsBX+pMbGPCGtqf1D6fujD0q2PCD8=\""
+          "Value": "\"tDtqo40hG6iAO3GiRyLIcaxUdqTPtASNfv9opRtV/pw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 10:02:37 GMT"
+          "Value": "Thu, 06 Mar 2025 09:11:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3099,7 +3054,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Vx6eh88CQIMveMZsBX+pMbGPCGtqf1D6fujD0q2PCD8="
+          "Value": "sha256-tDtqo40hG6iAO3GiRyLIcaxUdqTPtASNfv9opRtV/pw="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.gztm73ru4r.css",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tDtqo40hG6iAO3GiRyLIcaxUdqTPtASNfv9opRtV/pw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 09:11:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gztm73ru4r"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tDtqo40hG6iAO3GiRyLIcaxUdqTPtASNfv9opRtV/pw="
         }
       ]
     },
@@ -3126,7 +3126,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 11:04:14 GMT"
+          "Value": "Sat, 08 Mar 2025 22:37:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3171,7 +3171,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 11:04:14 GMT"
+          "Value": "Sat, 08 Mar 2025 22:37:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3216,7 +3216,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 11:04:14 GMT"
+          "Value": "Sat, 08 Mar 2025 22:37:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3253,7 +3253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 11:04:14 GMT"
+          "Value": "Sat, 08 Mar 2025 22:37:08 GMT"
         },
         {
           "Name": "Cache-Control",

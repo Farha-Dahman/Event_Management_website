@@ -19,6 +19,9 @@ namespace EventManagement_Application.Data
         public DbSet<OrganizerRequest> OrganizerRequests { get; set; }
         public DbSet<TicketUser> TicketUsers { get; set; }
         public DbSet<EventViewer> EventViewers { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<ContactForm> ContactForms { get; set; }
+        public DbSet<FavoriteEvent> Favorites { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -61,6 +64,18 @@ namespace EventManagement_Application.Data
                 .WithMany()
                 .HasForeignKey(ev => ev.ViewerId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<FavoriteEvent>()
+                .HasOne(f => f.User)
+                .WithMany()
+                .HasForeignKey(f => f.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<FavoriteEvent>()
+                .HasOne(ev => ev.Event)
+                .WithMany()
+                .HasForeignKey(ev => ev.EventId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

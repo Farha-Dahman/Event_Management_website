@@ -73,6 +73,11 @@ namespace EventManagement_Application.Pages.Organizer.Tickets
                 Ticket.TicketType = "Free";
             }
 
+            if (Ticket.OpenDate > Ticket.CloseDate)
+            {
+                ModelState.AddModelError("Ticket.OpenDate", "Sale Start Date cannot be later than Sale End Date.");
+            }
+
             _logger.LogInformation("Adding ticket to the database: Price: {TicketPrice}, Type: {TicketType}, Quantity: {TicketQuantity}, EventId: {EventId}",
                 Ticket.Price, Ticket.TicketType, Ticket.Quantity, Ticket.EventId);
 
