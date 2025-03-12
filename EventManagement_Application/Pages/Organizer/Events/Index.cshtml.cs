@@ -19,10 +19,11 @@ namespace EventManagement_Application.Pages.Organizer.Events
             _context = context;
         }
 
-        //public void OnGet()
-        //{
-        //    Events = _context.Events.ToList();
-        //}
+        // Properties for pagination
+        [BindProperty(SupportsGet = true)]
+        public int CurrentPage { get; set; } = 1;
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; } = 6;
 
         public List<Event> Events { get; set; } = new();
         public List<string> Categories { get; set; } = new();
@@ -42,53 +43,6 @@ namespace EventManagement_Application.Pages.Organizer.Events
         [BindProperty(SupportsGet = true)]
         public string? SelectedTicketType { get; set; }
         public List<string> TicketTypes { get; set; } = new();
-
-
-        //public async Task OnGetAsync()
-        //{
-        //    // Fetch distinct Ticket Types for the dropdown
-        //    TicketTypes = await _context.Tickets
-        //        .Select(t => t.TicketType)
-        //        .Distinct()
-        //        .ToListAsync();
-
-        //    // Get all events
-        //    IQueryable<Event> query = _context.Events;
-
-        //    // Apply Search
-        //    if (!string.IsNullOrEmpty(SearchTerm))
-        //    {
-        //        query = query.Where(e => e.Category.Contains(SearchTerm) || e.Location.Contains(SearchTerm));
-        //    }
-
-        //    // Apply Category search
-        //    if (!string.IsNullOrEmpty(SelectedCategory))
-        //    {
-        //        query = query.Where(e => e.Category == SelectedCategory);
-        //    }
-
-        //    // Apply Date search
-        //    if (SearchDate.HasValue)
-        //    {
-        //        DateTime selectedDate = SearchDate.Value.Date; // Get only the date part
-
-        //        query = query.Where(e => e.EventDate.Date == selectedDate);
-        //    }
-
-        //    // Apply Event Mode Filter (Online/In-Person)
-        //    if (SelectedMode.HasValue)
-        //    {
-        //        query = query.Where(e => e.Mode == SelectedMode);
-        //    }
-
-        //    // Apply Ticket Type Filter
-        //    if (!string.IsNullOrEmpty(SelectedTicketType))
-        //    {
-        //        query = query.Where(e => e.Tickets.Any(t => t.TicketType.ToString() == SelectedTicketType));
-        //    }
-
-        //    Events = await query.ToListAsync();
-        //}
 
         public async Task OnGetAsync()
         {
@@ -141,7 +95,16 @@ namespace EventManagement_Application.Pages.Organizer.Events
                 query = query.Where(e => e.Tickets.Any(t => t.TicketType.ToString() == SelectedTicketType));
             }
 
-            Events = await query.ToListAsync();
+            //Events = await query.ToListAsync();
+            // Calculate total number of events and pages
+            var totalEvents = await query.CountAsync();
+            TotalPages = (int)Math.Ceiling(totalEvents / (double)PageSize);
+
+            // Paginate the events
+            Events = await query
+                .Skip((CurrentPage - 1) * PageSize)
+                .Take(PageSize)
+                .ToListAsync();
         }
 
         [HttpPost] // Handle delete request

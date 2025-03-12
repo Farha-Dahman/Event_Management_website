@@ -1,4 +1,5 @@
 ﻿using EventManagement_Application.Data;
+using EventManagement_Application.Enums;
 using EventManagement_Application.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using X.PagedList;
+using X.PagedList.Extensions;
 
 namespace EventManagement_Application.Pages.Attendee
 {
@@ -22,14 +25,82 @@ namespace EventManagement_Application.Pages.Attendee
             _logger = logger;
         }
 
-        public List<Event> Events { get; set; }
+        //public List<Event> Events { get; set; }
 
         public List<int> FavoritedEventIds { get; set; } = new List<int>();
+        public IPagedList<Event> Events { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public int PageNumber { get; set; } = 1;
+
+        [BindProperty(SupportsGet = true)]
+        public int PageSize { get; set; } = 12;
+
+        // Properties for search and filtering
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SelectedCategory { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public EventMode? SelectedMode { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public DateTime? SearchDate { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SelectedTicketType { get; set; }
+
+        public List<string> TicketTypes { get; set; } = new();
 
         public async Task<IActionResult> OnGetAsync()
         {
-            Events = await _context.Events.ToListAsync();
+            // Fetch distinct Ticket Types for the dropdown
+            TicketTypes = await _context.Tickets
+                .Select(t => t.TicketType)
+                .Distinct()
+                .ToListAsync();
 
+            // Base query for events
+            var eventsQuery = _context.Events
+                .OrderBy(e => e.EventDate); // Order by event date
+
+            // Apply search and filters
+            var query = eventsQuery.AsQueryable(); // Start with the base query
+
+            if (!string.IsNullOrEmpty(SearchTerm))
+            {
+                query = query.Where(e =>
+                    e.Title.Contains(SearchTerm) ||
+                    e.Category.Contains(SearchTerm) ||
+                    e.Location.Contains(SearchTerm));
+            }
+
+            if (!string.IsNullOrEmpty(SelectedCategory))
+            {
+                query = query.Where(e => e.Category == SelectedCategory);
+            }
+
+            if (SearchDate.HasValue)
+            {
+                query = query.Where(e => e.EventDate.Date == SearchDate.Value.Date);
+            }
+
+            if (SelectedMode.HasValue)
+            {
+                query = query.Where(e => e.Mode == SelectedMode);
+            }
+
+            if (!string.IsNullOrEmpty(SelectedTicketType))
+            {
+                query = query.Where(e => e.Tickets.Any(t => t.TicketType == SelectedTicketType));
+            }
+
+            // Paginate the filtered query
+            Events = query.ToPagedList(PageNumber, PageSize);
+
+            // Fetch favorited event IDs for the logged-in user
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId != null)
             {
@@ -41,7 +112,6 @@ namespace EventManagement_Application.Pages.Attendee
 
             return Page();
         }
-
         public async Task<IActionResult> OnPostTrackQRCodeScanAsync(int eventId)
         {
             _logger.LogInformation("OnPostTrackQRCodeScanAsync: Event ID: {EventId}", eventId);

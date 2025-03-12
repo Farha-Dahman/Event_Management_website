@@ -296,3 +296,5 @@ C:\Users\farha\source\repos\EventManagement_Application\EventManagement_Applicat
 C:\Users\farha\source\repos\EventManagement_Application\EventManagement_Application\obj\Debug\net8.0\EventManagement_Application.genruntimeconfig.cache
 C:\Users\farha\source\repos\EventManagement_Application\EventManagement_Application\obj\Debug\net8.0\ref\EventManagement_Application.dll
 C:\Users\farha\source\repos\EventManagement_Application\EventManagement_Application\obj\Debug\net8.0\EventManagement_Application.sourcelink.json
+C:\Users\farha\source\repos\EventManagement_Application\EventManagement_Application\bin\Debug\net8.0\X.PagedList.dll
+C:\Users\farha\source\repos\EventManagement_Application\EventManagement_Application\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll

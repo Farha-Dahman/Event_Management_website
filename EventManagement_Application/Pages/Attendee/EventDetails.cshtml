@@ -1,123 +1,4 @@
-﻿@* @page *@
-@* @model EventManagement_Application.Pages.Attendee.EventDetailsModel *@
-@* @using EventManagement_Application.Models *@
-@* @{ *@
-@*     ViewData["Title"] = "Event Details"; *@
-@* } *@
-
-@* <h1>@Model.Event.Title</h1> *@
-
-@* <div> *@
-@*     <h4>@Model.Event.Description</h4> *@
-@*     <p>@Model.Event.EventDate</p> *@
-@*     <p>@Model.Event.Location</p> *@
-@*     <p>@Model.Event.Category</p> *@
-@*     <p>@Model.Event.Mode</p> *@
-
-@*     <h3>Tickets</h3> *@
-@*     @foreach (var ticket in Model.Tickets) *@
-@*     { *@
-@*         <div> *@
-@*             <p><strong>@ticket.TicketType</strong></p> *@
-@*             <p>Price: $@ticket.Price</p> *@
-@*             <p>Available Tickets: @ticket.AvailableTickets</p> *@
-
-@*             @if (ticket.AvailableTickets == 0) *@
-@*             { *@
-@*                 <p class="text-danger"><strong>Sold Out</strong></p> *@
-@*                 <button class="btn btn-secondary" disabled>Sold Out</button> *@
-@*             } *@
-@*             else *@
-@*             { *@
-@*                 <form method="post" asp-page-handler="ReserveTicket"> *@
-@*                     <input type="hidden" name="TicketId" value="@ticket.Id" /> *@
-
-@*                     <label for="ticketCount-@ticket.Id">Select quantity:</label> *@
-@*                     <input type="number" id="ticketCount-@ticket.Id" *@
-@*                            name="TicketCount" *@
-@*                            min="1" *@
-@*                            max="@ticket.AvailableTickets" *@
-@*                            value="1" *@
-@*                            required *@
-@*                            onchange="updateTotalPrice(@ticket.Id, @ticket.Price)" /> *@
-@*                     <p>Total Price: <span id="totalPrice-@ticket.Id">@ticket.Price</span></p> *@
-
-
-@*                     @if (ticket.Price == 0) *@
-@*                     { *@
-@*                         <button type="button" data-bs-toggle="modal" data-bs-target="#freeTicketModal-@ticket.Id" class="btn btn-primary">Reserve Free Ticket</button> *@
-@*                     } *@
-@*                     else *@
-@*                     { *@
-@*                         <button type="submit" class="btn btn-primary">Buy Tickets</button> *@
-@*                     } *@
-@*                 </form> *@
-@*             } *@
-
-@*             @if (ticket.Price == 0 && ticket.AvailableTickets > 0) *@
-@*             { *@
-@*                 <!-- Free Ticket Modal --> *@
-@*                 <div class="modal fade" id="freeTicketModal-@ticket.Id" tabindex="-1" aria-labelledby="freeTicketModalLabel-@ticket.Id" aria-hidden="true"> *@
-@*                     <div class="modal-dialog"> *@
-@*                         <div class="modal-content"> *@
-@*                             <div class="modal-header"> *@
-@*                                 <h5 class="modal-title" id="freeTicketModalLabel-@ticket.Id">Are you sure you want to reserve this free ticket?</h5> *@
-@*                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
-@*                             </div> *@
-@*                             <div class="modal-footer"> *@
-@*                                 <form method="post" asp-page-handler="ReserveTicket"> *@
-@*                                     <input type="hidden" name="TicketId" value="@ticket.Id" /> *@
-@*                                     <input type="hidden" id="hiddenTicketCount-@ticket.Id" name="TicketCount" value="1" /> *@
-
-@*                                     <button type="submit" class="btn btn-primary">Yes, Reserve</button> *@
-@*                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button> *@
-@*                                 </form> *@
-@*                             </div> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             } *@
-@*         </div> *@
-@*     } *@
-@* </div> *@
-
-@* <script> *@
-@*     function updateTotalPrice(ticketId, price) { *@
-@*         var countInput = document.getElementById(`ticketCount-${ticketId}`); *@
-@*         var totalPrice = document.getElementById(`totalPrice-${ticketId}`); *@
-
-@*         // Ensure quantity is at least 1 *@
-@*         if (countInput.value < 1) { *@
-@*             countInput.value = 1; *@
-@*         } *@
-
-@*         // Ensure quantity doesn't exceed available tickets *@
-@*         var maxTickets = parseInt(countInput.max, 10); *@
-@*         if (countInput.value > maxTickets) { *@
-@*             countInput.value = maxTickets; *@
-@*         } *@
-
-@*         // Calculate and display total price *@
-@*         totalPrice.innerText = (countInput.value * price).toFixed(2); *@
-@*     } *@
-
-@*     function setTicketCount(ticketId) { *@
-@*         var selectedQuantity = document.getElementById(`ticketCount-${ticketId}`).value; *@
-@*         document.getElementById(`hiddenTicketCount-${ticketId}`).value = selectedQuantity; *@
-@*     } *@
-
-@*     // Add event listeners to update ticket count before opening the modal *@
-@*     document.addEventListener("DOMContentLoaded", function () { *@
-@*         document.querySelectorAll("[data-bs-toggle='modal']").forEach(button => { *@
-@*             button.addEventListener("click", function () { *@
-@*                 var ticketId = this.getAttribute("data-bs-target").replace("#freeTicketModal-", ""); *@
-@*                 setTicketCount(ticketId); *@
-@*             }); *@
-@*         }); *@
-@*     }); *@
-@* </script> *@
-
-@page
+﻿@page
 @model EventManagement_Application.Pages.Attendee.EventDetailsModel
 @using EventManagement_Application.Models
 @{
@@ -162,6 +43,11 @@
             <i class="fa fa-tag text-success me-2"></i>
             <span class="fw-bold">Category: @Model.Event.Category</span>
         </div>
+
+        <div class="d-flex align-items-center my-3">
+            <i class="fa-solid fa-earth-americas text-info me-2"></i>
+            <span class="fw-bold">Mode: @Model.Event.Mode</span>
+        </div>
     </div>
 
     <!-- Tickets Section -->
@@ -189,18 +75,16 @@
                                 bool isTicketOpen = ticket.OpenDate <= DateTime.Now;
                                 bool isTicketClosed = ticket.CloseDate <= DateTime.Now;
 
-                                <form method="post" asp-page-handler="ReserveTicket">
+                                <form method="post" asp-page-handler="ReserveTicket" onsubmit="handleTicketReservation(event, @ticket.Id, @ticket.Price)" data-ticket-id="@ticket.Id">
                                     <input type="hidden" name="TicketId" value="@ticket.Id" />
 
-                                    <!-- Quantity and Total Price Side by Side -->
                                     <div class="d-flex justify-content-between align-items-center my-3">
                                         <div class="w-50 me-2">
                                             <label for="ticketCount-@ticket.Id" class="fw-bold">Quantity:</label>
                                             <input type="number" id="ticketCount-@ticket.Id" name="TicketCount"
                                                    min="1" max="@ticket.AvailableTickets" value="1"
                                                    class="form-control text-center" required
-                                                   onchange="updateTotalPrice(@ticket.Id, @ticket.Price)"
-                                            @(isTicketOpen && !isTicketClosed ? "" : "disabled")>
+                                                   onchange="updateTotalPrice(@ticket.Id, @ticket.Price)">
                                         </div>
                                         <div class="w-50 ms-2">
                                             <p class="fw-bold mb-0">Total Price:</p>
@@ -208,12 +92,14 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn @(isTicketOpen && !isTicketClosed ? "bg-btn text-white" : "btn-secondary") w-100 mt-2"
+                                    <button type="submit"
+                                            class="btn @(isTicketOpen && !isTicketClosed ? "bg-btn text-white" : "btn-secondary") w-100 mt-2"
                                     @(isTicketOpen && !isTicketClosed ? "" : "disabled")
                                             title="@(!isTicketOpen ? "Ticket not available yet" : (isTicketClosed ? "The ticket sale period has ended" : ""))">
                                         @(!isTicketOpen ? "Ticket not available yet" : (isTicketClosed ? "The ticket sale period has ended" : "Buy Ticket"))
                                     </button>
                                 </form>
+
                             }
                         </div>
                     </div>
@@ -235,9 +121,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    @* <a href="@Url.Page("/Identity/Account/Login")" class="btn btn-primary bg-primary-color">Log in</a> *@
                     <button type="button" class="btn btn-primary bg-primary-color" id="loginButton">Log in</button>
-
                 </div>
             </div>
         </div>
@@ -248,11 +132,67 @@
     </div>
 </div>
 
+<!-- Payment Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Payment Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="paymentForm">
+                    <input type="hidden" id="ticketIdInput" name="TicketId" />
+
+                    <!-- Payment Details (you can ignore these fields for this case) -->
+                    <div class="mb-3">
+                        <label class="form-label">Card Number</label>
+                        <input type="text" class="form-control" name="CardNumber" placeholder="1234 1234 1234 1234" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Expiration</label>
+                            <input type="text" class="form-control" name="Expiration" placeholder="MM/YY" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">CVC</label>
+                            <input type="text" class="form-control" name="CVC" placeholder="CVC" required>
+                        </div>
+                    </div>
+
+                    <!-- We ignore this information for reservation purposes -->
+                    <div class="mb-3">
+                        <label class="form-label">Country</label>
+                        <select class="form-select" name="Country" required>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">ZIP Code</label>
+                        <input type="text" class="form-control" name="ZIP" placeholder="12345" required>
+                    </div>
+
+                    <!-- Submit the reservation on Pay button -->
+                    <button type="button" class="btn bg-primary-color text-white w-100 mt-2" onclick="handlePaymentSubmit();">
+                        Pay Ticket
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     // Function to update the total price based on the selected quantity
     function updateTotalPrice(ticketId, price) {
         var countInput = document.getElementById(`ticketCount-${ticketId}`);
         var totalPriceElement = document.getElementById(`totalPrice-${ticketId}`);
+        var totalPriceButtonElement = document.getElementById(`totalPriceButton-${ticketId}`);
 
         // Ensure quantity is at least 1
         if (countInput.value < 1) {
@@ -268,37 +208,90 @@
         // Calculate and display total price
         var totalPrice = (countInput.value * price).toFixed(2);
         totalPriceElement.innerText = totalPrice;
+        totalPriceButtonElement.innerText = totalPrice; // Update the button text
     }
 
-    // Add event listeners to update ticket count before opening the modal
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll("[data-bs-toggle='modal']").forEach(button => {
-            button.addEventListener("click", function () {
-                var ticketId = this.getAttribute("data-bs-target").replace("#freeTicketModal-", "");
-                setTicketCount(ticketId);
-            });
-        });
+    // Function to check if ticket is free or paid and show appropriate actions
+    function checkTicketReservation(event, ticketId, price, ticketType) {
+        event.preventDefault(); // Prevent form submission
+
+        var countInput = document.getElementById(`ticketCount-${ticketId}`);
+        var isFreeTicket = price === 0;
+
+        if (isFreeTicket) {
+            // Free ticket, directly proceed with reservation
+            event.target.submit();  // Manually submit the form
+        } else {
+            // Paid ticket, show payment modal
+            $('#paymentModal').modal('show');
+
+            // Store the form to submit it after payment confirmation
+            $('#paymentModal').data('form', event.target);
+        }
+    }
+
+    // When the user confirms payment, submit the form
+    document.getElementById('proceedToPaymentButton').addEventListener('click', function() {
+        var form = $('#paymentModal').data('form');
+        if (form) {
+            form.submit(); // Submit the form after payment confirmation
+        }
+        $('#paymentModal').modal('hide'); // Hide the modal after submission
     });
 
+    function handleTicketReservation(event, ticketId, price) {
+        event.preventDefault(); // Prevent immediate form submission
 
-    function checkLoginStatus() {
-            var isAuthenticated = @User.Identity.IsAuthenticated.ToString().ToLower(); // Server-side check
+        var isFreeTicket = price === 0;
 
-            if (!isAuthenticated) {
-                // If user is not authenticated, show the login popup
-                $('#loginModal').modal('show');
-                return false; // Prevent form submission
-            }
+        if (isFreeTicket) {
+            // Free ticket, directly submit the form
+            event.target.closest('form').submit(); // Manually submit the form
+        } else {
+            // Paid ticket, show payment modal
+            $('#paymentModal').modal('show');
+            // Store the ticketId in the modal for later use
+            $('#ticketIdInput').val(ticketId);  // Set the ticket ID
+            $('#ticketPriceDisplay').text(`$${price}`);  // Show the ticket price
+        }
+    }
 
-            return true; // Allow form submission if authenticated
+    function handlePaymentSubmit() {
+        var ticketId = $('#ticketIdInput').val();
+        var form = document.querySelector(`form[data-ticket-id="${ticketId}"]`);
+
+        if (form) {
+            form.submit(); // Submit the form after payment confirmation
         }
 
-    document.getElementById('loginButton').addEventListener('click', function() {
-        // Redirect to the login page directly
-        window.location.href = '/Identity/Account/Login';
-    });
-</script>
+        $('#paymentModal').modal('hide'); // Close the modal
+    }
 
+    function reserveTicket(ticketId) {
+        var ticketCount = $("#ticketCount-" + ticketId).val(); // Get the selected count
+
+        $.ajax({
+            // url: '@Url.Page("/Attendee/EventDetails", "ReserveTicket")', 
+            url: '/Attendee/EventDetails?handler=ReserveTicket',
+            method: 'POST',
+            data: { TicketId: ticketId, TicketCount: ticketCount }, // Send both parameters
+            success: function(response) {
+                if (response.success) {
+                    alert(' reserved successfully!');
+                    location.reload(); // Optional: Refresh the page
+                } else {
+                    alert('Error reserving ticket.');
+                }
+            },
+            error: function(xhr) {
+               console.error(xhr.responseText); // Log detailed error
+                alert('Error reserving ticket.');
+                alert(ticketId);
+                alert(ticketCount);
+            }
+        });
+    }
+</script>
 
 <!-- Styling -->
 <style>
