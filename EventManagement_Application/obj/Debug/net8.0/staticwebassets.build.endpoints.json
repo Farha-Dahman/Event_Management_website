@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:09:06 GMT"
+          "Value": "Thu, 13 Mar 2025 09:21:52 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,13 +74,95 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:09:06 GMT"
+          "Value": "Thu, 13 Mar 2025 09:21:52 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
           "Value": "sha256-5jeKoLk+yrMfdYTGIs5dxTq7LwlEtBIQqFtMWsmOq78="
+        }
+      ]
+    },
+    {
+      "Route": "Eventify-logo.1ufpflw1mx.ico",
+      "AssetFile": "Eventify-logo.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:24:08 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1ufpflw1mx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4="
+        },
+        {
+          "Name": "label",
+          "Value": "Eventify-logo.ico"
+        }
+      ]
+    },
+    {
+      "Route": "Eventify-logo.ico",
+      "AssetFile": "Eventify-logo.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:24:08 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4="
         }
       ]
     },
@@ -2305,7 +2387,7 @@
       ]
     },
     {
-      "Route": "css/site.3n5kfdlwhg.css",
+      "Route": "css/site.btqhtloqnj.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2319,7 +2401,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19955"
+          "Value": "20011"
         },
         {
           "Name": "Content-Type",
@@ -2327,21 +2409,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A=\""
+          "Value": "\"/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:21:58 GMT"
+          "Value": "Thu, 13 Mar 2025 08:47:45 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3n5kfdlwhg"
+          "Value": "btqhtloqnj"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A="
+          "Value": "sha256-/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY="
         },
         {
           "Name": "label",
@@ -2364,7 +2446,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19955"
+          "Value": "20011"
         },
         {
           "Name": "Content-Type",
@@ -2372,99 +2454,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A=\""
+          "Value": "\"/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:21:58 GMT"
+          "Value": "Thu, 13 Mar 2025 08:47:45 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 22:07:45 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico"
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ico",
-      "AssetFile": "favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 22:07:45 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+          "Value": "sha256-/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY="
         }
       ]
     },
@@ -2547,6 +2547,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-E1GlgLhpDPyL7CTVC0oeE2EeJw6UPbxAMe2c0490T2k="
+        }
+      ]
+    },
+    {
+      "Route": "images/Eventify-Logo-White-small.d2hcqdg73b.png",
+      "AssetFile": "images/Eventify-Logo-White-small.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8459"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:23:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d2hcqdg73b"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ="
+        },
+        {
+          "Name": "label",
+          "Value": "images/Eventify-Logo-White-small.png"
+        }
+      ]
+    },
+    {
+      "Route": "images/Eventify-Logo-White-small.png",
+      "AssetFile": "images/Eventify-Logo-White-small.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8459"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:23:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ="
         }
       ]
     },
@@ -3613,88 +3695,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-wOGQLWIIla5FD5u0n+/RsDZD4hUIL1AIqLnHHcNPKJU="
-        }
-      ]
-    },
-    {
-      "Route": "images/light-LogoEventify.png",
-      "AssetFile": "images/light-LogoEventify.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Feb 2025 18:54:01 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI="
-        }
-      ]
-    },
-    {
-      "Route": "images/light-LogoEventify.vgyuv6dnq7.png",
-      "AssetFile": "images/light-LogoEventify.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Feb 2025 18:54:01 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vgyuv6dnq7"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI="
-        },
-        {
-          "Name": "label",
-          "Value": "images/light-LogoEventify.png"
         }
       ]
     },

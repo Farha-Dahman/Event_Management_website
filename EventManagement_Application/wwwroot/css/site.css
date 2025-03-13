@@ -203,6 +203,11 @@ ul {
 
 .logo {
     height: 50px;
+    width: 220px;
+}
+
+.logo-nav {
+    height: 30px;
     width: 150px;
 }
 

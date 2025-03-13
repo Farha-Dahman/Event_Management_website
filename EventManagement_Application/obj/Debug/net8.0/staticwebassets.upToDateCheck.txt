@@ -1,14 +1,14 @@
 wwwroot\css\site.css
-wwwroot\favicon.ico
+wwwroot\Eventify-logo.ico
 wwwroot\images\Airbnb.svg
 wwwroot\images\background-image.jpg
 wwwroot\images\background-image-event.svg
 wwwroot\images\background-image-third.jpg
 wwwroot\images\background-img3.jpg
 wwwroot\images\background-slide3.jpg
+wwwroot\images\Eventify-Logo-White-small.png
 wwwroot\images\Google.svg
 wwwroot\images\hero-bg1.svg
-wwwroot\images\light-LogoEventify.png
 wwwroot\images\Login-image.svg
 wwwroot\images\Mailchimp.svg
 wwwroot\images\management-office.svg

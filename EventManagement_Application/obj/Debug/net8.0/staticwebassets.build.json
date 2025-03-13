@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "24tJMqqPWvhRd+lEidvpxarBeobhTK8NlxJMVeYDcUU=",
+  "Hash": "yxhNNGLw45UGV1CJn0Jj1yBwHMS2APPevKbyDH9BPRk=",
   "Source": "EventManagement_Application",
   "BasePath": "_content/EventManagement_Application",
   "Mode": "Default",
@@ -1333,19 +1333,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3n5kfdlwhg",
-      "Integrity": "cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A=",
+      "Fingerprint": "btqhtloqnj",
+      "Integrity": "/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\Eventify-logo.ico",
       "SourceId": "EventManagement_Application",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
       "BasePath": "_content/EventManagement_Application",
-      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "RelativePath": "Eventify-logo#[.{fingerprint}]?.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1354,11 +1354,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "61n19gt1b8",
-      "Integrity": "Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "Fingerprint": "1ufpflw1mx",
+      "Integrity": "l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\Eventify-logo.ico"
     },
     {
       "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Airbnb.svg",
@@ -1487,6 +1487,27 @@
       "OriginalItemSpec": "wwwroot\\images\\background-slide3.jpg"
     },
     {
+      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Eventify-Logo-White-small.png",
+      "SourceId": "EventManagement_Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
+      "BasePath": "_content/EventManagement_Application",
+      "RelativePath": "images/Eventify-Logo-White-small#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d2hcqdg73b",
+      "Integrity": "m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Eventify-Logo-White-small.png"
+    },
+    {
       "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
       "SourceId": "EventManagement_Application",
       "SourceType": "Discovered",
@@ -1527,27 +1548,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\hero-bg1.svg"
-    },
-    {
-      "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
-      "SourceId": "EventManagement_Application",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\",
-      "BasePath": "_content/EventManagement_Application",
-      "RelativePath": "images/light-LogoEventify#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "vgyuv6dnq7",
-      "Integrity": "//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\light-LogoEventify.png"
     },
     {
       "Identity": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Login-image.svg",
@@ -3022,7 +3022,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.3n5kfdlwhg.css",
+      "Route": "css/site.btqhtloqnj.css",
       "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3032,7 +3032,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19955"
+          "Value": "20011"
         },
         {
           "Name": "Content-Type",
@@ -3040,11 +3040,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A=\""
+          "Value": "\"/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:21:58 GMT"
+          "Value": "Thu, 13 Mar 2025 08:47:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3054,7 +3054,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3n5kfdlwhg"
+          "Value": "btqhtloqnj"
         },
         {
           "Name": "label",
@@ -3062,7 +3062,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A="
+          "Value": "sha256-/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY="
         }
       ]
     },
@@ -3077,7 +3077,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19955"
+          "Value": "20011"
         },
         {
           "Name": "Content-Type",
@@ -3085,11 +3085,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A=\""
+          "Value": "\"/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:21:58 GMT"
+          "Value": "Thu, 13 Mar 2025 08:47:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3099,7 +3099,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cZMRHyo2clLoiWCkUxO3Jx1JZnWTIs2qj74D/MgFe8A="
+          "Value": "sha256-/1IC8sK4NXFTHyJ8Ha3OiVv1L+9o8hbQLv9jy7BrqmY="
+        }
+      ]
+    },
+    {
+      "Route": "Eventify-logo.1ufpflw1mx.ico",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\Eventify-logo.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:24:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1ufpflw1mx"
+        },
+        {
+          "Name": "label",
+          "Value": "Eventify-logo.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4="
+        }
+      ]
+    },
+    {
+      "Route": "Eventify-logo.ico",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\Eventify-logo.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:24:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8DzFjab/DGCpJqWX6+Y3fifOtYcCMkuhgy1ZdRqEs4="
         }
       ]
     },
@@ -3126,7 +3208,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:09:06 GMT"
+          "Value": "Thu, 13 Mar 2025 09:21:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3171,7 +3253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:09:06 GMT"
+          "Value": "Thu, 13 Mar 2025 09:21:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3216,7 +3298,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:09:06 GMT"
+          "Value": "Thu, 13 Mar 2025 09:21:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3253,7 +3335,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 10:09:06 GMT"
+          "Value": "Thu, 13 Mar 2025 09:21:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3264,88 +3346,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-5jeKoLk+yrMfdYTGIs5dxTq7LwlEtBIQqFtMWsmOq78="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 22:07:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 22:07:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
         }
       ]
     },
@@ -6062,6 +6062,88 @@
       ]
     },
     {
+      "Route": "images/Eventify-Logo-White-small.d2hcqdg73b.png",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Eventify-Logo-White-small.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8459"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:23:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d2hcqdg73b"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Eventify-Logo-White-small.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/Eventify-Logo-White-small.png",
+      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Eventify-Logo-White-small.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8459"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:23:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m7BuXSmmzujGZyQx1LQIHIRX9YBPEPVNPuLTjuUY7VQ="
+        }
+      ]
+    },
+    {
       "Route": "images/Google.bnjl7fah7n.svg",
       "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
       "Selectors": [],
@@ -6222,88 +6304,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-wOGQLWIIla5FD5u0n+/RsDZD4hUIL1AIqLnHHcNPKJU="
-        }
-      ]
-    },
-    {
-      "Route": "images/light-LogoEventify.png",
-      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Feb 2025 18:54:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI="
-        }
-      ]
-    },
-    {
-      "Route": "images/light-LogoEventify.vgyuv6dnq7.png",
-      "AssetFile": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Feb 2025 18:54:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vgyuv6dnq7"
-        },
-        {
-          "Name": "label",
-          "Value": "images/light-LogoEventify.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-//Bxe9uWR9FMsaSIR6G9ToM9qT31/06BJv7sbi58PpI="
         }
       ]
     },

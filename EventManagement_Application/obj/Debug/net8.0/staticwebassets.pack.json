@@ -5,16 +5,20 @@
       "PackagePath": "staticwebassets\\EventManagement_Application.6kpim4svbh.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\Eventify-logo.ico",
+      "PackagePath": "staticwebassets\\Eventify-logo.ico"
+    },
+    {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Airbnb.svg",
       "PackagePath": "staticwebassets\\images\\Airbnb.svg"
+    },
+    {
+      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Eventify-Logo-White-small.png",
+      "PackagePath": "staticwebassets\\images\\Eventify-Logo-White-small.png"
     },
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\Google.svg",
@@ -67,10 +71,6 @@
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\hero-bg1.svg",
       "PackagePath": "staticwebassets\\images\\hero-bg1.svg"
-    },
-    {
-      "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\light-LogoEventify.png",
-      "PackagePath": "staticwebassets\\images\\light-LogoEventify.png"
     },
     {
       "Id": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\wwwroot\\images\\management-office.svg",
