@@ -53,7 +53,6 @@ namespace EventManagement_Application.Pages.Organizer.Events
             //}
 
             var existingEvent = _context.Events.Find(Event.Id);
-            Console.WriteLine(existingEvent);
 
             if (existingEvent == null)
             {
@@ -67,10 +66,9 @@ namespace EventManagement_Application.Pages.Organizer.Events
             {
                 // Update fields
                 existingEvent.Title = Event.Title;
-                Console.WriteLine(existingEvent.Title);
-
                 existingEvent.Description = Event.Description;
                 existingEvent.CreationDate = Event.CreationDate;
+                existingEvent.EventImage = Event.EventImage;
                 existingEvent.Location = Event.Location;
                 existingEvent.Category = Event.Category;
                 existingEvent.Mode = Event.Mode;

@@ -30,7 +30,7 @@ namespace EventManagement_Application.Pages.Attendee
             var user = await _userManager.GetUserAsync(User);
 
             // Default avatar if user profile picture is null
-            string userAvatar = "/images/default-avatar.jpg";
+            string userAvatar = "/images/profilePicture.jpg";
 
             if (user?.ProfilePicture != null && user.ProfilePicture.Length > 0)
             {
@@ -40,7 +40,7 @@ namespace EventManagement_Application.Pages.Attendee
 
             var feedback = new Feedback
             {
-                UserName = user?.UserName ?? "Anonymous",
+                UserName = user?.FirstName + " " + user?.LastName ?? "Anonymous",
                 Rating = Rating,
                 UserAvatar = userAvatar,
                 Comment = Comment

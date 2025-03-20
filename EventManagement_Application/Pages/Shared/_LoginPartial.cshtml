@@ -1,40 +1,46 @@
-﻿@using EventManagement_Application.Models
+﻿﻿@using EventManagement_Application.Models
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
     var user = await UserManager.GetUserAsync(User);
+    var profilePicture = user?.ProfilePicture;
+    var defaultImagePath = Url.Content("~/images/profilePicture.jpg");
 }
 
+
 <ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <div class="text-center align-items-center d-flex">
-        @if(UserManager.GetUserAsync(User).Result.ProfilePicture != null)
-        {
-            <li class="nav-item">
-                    <img class="avatar-profile-picture rounded-circle" alt="profile" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))" />
-            </li>
-        }
-        <li class="nav-item text-center">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="align-items-start d-flex flex-column flex-md-row">
+            <!-- Profile Image (Hidden on Small Screens) -->
+        <li class="nav-item d-none d-md-block">
+            <img class="avatar-profile-picture rounded-circle"
+                 alt="profile"
+                 src="@(profilePicture != null ? $"data:image/*;base64,{Convert.ToBase64String(profilePicture)}" : defaultImagePath)" />
+        </li>
+
+        <!-- Greeting and Logout (Visible on All Screens) -->
+        <li class="nav-item text-center d-block">
             <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @user.FirstName!</a>
         </li>
-        <li class="nav-item">
+
+        <li class="nav-item d-block">
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
                 <button type="submit" class="nav-link btn btn-link text-white fw-bold">Logout</button>
             </form>
         </li>
-    </div>
-}
-else
-{
-    <li class="nav-item px-2">
-        <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
-    </li>
-    <li class="nav-item px-2">
-        <div class="bg-btn rounded-5 px-3">
-            <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Login">Login</a>
         </div>
-    </li>
-}
+    }
+    else
+    {
+        <li class="nav-item px-2">
+            <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+        </li>
+        <li class="nav-item px-2">
+            <div class="bg-btn rounded-5 px-3">
+                <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Login">Login</a>
+            </div>
+        </li>
+    }
 </ul>

@@ -36,7 +36,9 @@
                         }
                         else
                         {
-                            <a href="/Organizer/Request" class="btn btn-outline-light bg-btn btn-lg">Request to be an Organizer</a>
+                            <button type="button" class="btn btn-outline-light bg-btn btn-lg" id="requestAccessButton">
+                                Request to be an Organizer
+                            </button>
                         }
                     }
                     <a href="/Attendee/ViewEvents" class="btn btn-outline-light btn-lg">View Latest Event</a>
@@ -306,7 +308,12 @@
                                 <div class="col-md-4">
                                     <div class="card feedback-card shadow-sm p-3">
                                         <div class="d-flex flex-column align-items-center text-center">
-                                            <img src="@(feedback.UserAvatar ?? "/images/default-avatar.jpg")"
+                                            @{
+                                                var defaultImagePath = Url.Content("~/images/profilePicture.jpg");
+                                            }
+
+                                            <!-- Display feedback user's avatar or default avatar if not available -->
+                                            <img src="@(feedback.UserAvatar != null ? feedback.UserAvatar : defaultImagePath)"
                                                  class="rounded-circle mb-3"
                                                  width="80"
                                                  height="80"
@@ -348,39 +355,10 @@
     </div>
 </section>
 
-<!-- Contact Section -->
-<section class="contact-section my-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left Side: Image -->
-            <div class="col-md-6 col-sm-12">
-                <img src="~/images/Messages-amico.svg" alt="Contact Us" class="img-fluid w-75">
-            </div>
-
-            <!-- Right Side: Contact Form -->
-            <div class="col-md-6">
-                <h2>Contact Us</h2>
-                <form id="contactForm" method="POST" asp-page-handler="Contact">
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" asp-for="ContactForm.Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" asp-for="ContactForm.Message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn bg-primary-color text-white">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
 @if (SignInManager.IsSignedIn(User) && !User.IsInRole("Organizer"))
 {
     <section class="become-organizer-section text-center pb-5">
         <div class="container">
-            <hr class="w-50 d-inline-grid"/>
             <h2 class="fw-bold py-3 clr-text">Become an Event Organizer</h2>
             <p class="text-muted">
                 Want to host your own events? Request to become an organizer and start creating events today!
@@ -389,6 +367,7 @@
                 Request Access
             </button>
         </div>
+        <hr class="mt-5 w-25 d-inline-grid" />
     </section>
 
     <!-- Confirmation Modal -->
@@ -414,6 +393,33 @@
     </div>
 }
 
+<!-- Contact Section -->
+<section class="contact-section p-3 pb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side: Image -->
+            <div class="col-md-6 col-sm-12">
+                <img src="~/images/Messages-amico.svg" alt="Contact Us" class="img-fluid w-75">
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <form id="contactForm" method="POST" asp-page-handler="Contact">
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" asp-for="ContactForm.Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" asp-for="ContactForm.Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn bg-primary-color text-white">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script>     
     document.getElementById("requestAccessButton").addEventListener("click", function () {

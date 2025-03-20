@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ULsjm8Jq510=",
+  "dgSpecHash": "zlyXmMjOd1w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\farha\\source\\repos\\EventManagement_Application\\EventManagement_Application\\EventManagement_Application.csproj",
+  "projectFilePath": "C:\\Users\\farha\\Desktop\\Event_Management_website\\EventManagement_Application\\EventManagement_Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\farha\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\farha\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

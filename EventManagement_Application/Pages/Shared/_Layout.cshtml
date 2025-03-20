@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -21,7 +22,7 @@
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow nav justify-content-center">
                 <div class="container mx-5">
                     <a class="navbar-brand text-white fw-bold" asp-area="" asp-page="/Index">
-                       <img class="logo-nav mb-2" src="~/images/Eventify-Logo-White-small.png" alt="Eventify Logo" />
+                        <img class="logo-nav mb-2" src="~/images/Eventify-Logo-White-small.png" alt="Eventify Logo" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +55,9 @@
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-white fw-bold" asp-page="/Organizer/Events/Index">Manage Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white fw-bold" asp-page="/Organizer/Events/Create">Create Event</a>
                                 </li>
                             }
                             @if (User.IsInRole("Organizer") || User.IsInRole("User"))
@@ -100,7 +104,9 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 my-3">
                         <ul>
                             <li><h4 class="mb-3">CONTACT INFO</h4></li>
-                            <li>eventifyTeam@gmail.com</li>
+                            <li>
+                                eventifyapplicationteam@gmail.com
+                            </li>
                             <li>+999 999 999</li>
                         </ul>
                     </div>

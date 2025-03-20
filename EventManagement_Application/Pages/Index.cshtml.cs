@@ -124,5 +124,6 @@ namespace EventManagement_Application.Pages
         //    _context.ContactForms.Add(contactForm);
         //    await _context.SaveChangesAsync();
         //}
+
     }
 }
